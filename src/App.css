@@ -42,3 +42,33 @@
 .click-spark{font-size:17px;animation:click-spark-scatter .68s cubic-bezier(.16,.7,.25,1) forwards}
 @keyframes click-spark-scatter{0%{opacity:1;transform:translate(-50%,-50%) scale(.55) rotate(0deg)}75%{opacity:.85}100%{opacity:0;transform:translate(calc(-50% + var(--spark-x)),calc(-50% + var(--spark-y))) scale(1.2) rotate(35deg)}}
 @media(max-width:760px),(prefers-reduced-motion:reduce){.cursor-spark,.click-spark{display:none}}
+
+
+/* Story diagrams: quiet, one-time-feeling reveals tied to scroll progress. */
+@keyframes diagram-enter {
+  from { opacity: 0; transform: translateY(18px) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes diagram-detail-enter {
+  from { opacity: .35; }
+  to { opacity: 1; }
+}
+@supports (animation-timeline: view()) {
+  .chapter .sketch {
+    animation: diagram-enter linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 38%;
+  }
+  .chapter .sketch > * {
+    animation: diagram-detail-enter linear both;
+    animation-timeline: view();
+    animation-range: entry 8% entry 48%;
+  }
+}
+/* Keep scroll-linked motion gentle and fully optional. */
+@media (prefers-reduced-motion: reduce) {
+  .chapter .sketch,
+  .chapter .sketch > * {
+    animation: none !important;
+  }
+}
