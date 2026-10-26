@@ -44,31 +44,31 @@
 @media(max-width:760px),(prefers-reduced-motion:reduce){.cursor-spark,.click-spark{display:none}}
 
 
-/* Story diagrams: quiet, one-time-feeling reveals tied to scroll progress. */
-@keyframes diagram-enter {
-  from { opacity: 0; transform: translateY(18px) scale(.985); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+
+/* Story diagrams reveal once when they enter the viewport. */
+.chapter .sketch {
+  opacity: 0;
+  transform: translateY(20px) scale(.985);
+  transition: opacity 650ms ease, transform 650ms cubic-bezier(.2,.7,.2,1);
 }
-@keyframes diagram-detail-enter {
-  from { opacity: .35; }
-  to { opacity: 1; }
+.chapter .sketch.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
-@supports (animation-timeline: view()) {
-  .chapter .sketch {
-    animation: diagram-enter linear both;
-    animation-timeline: view();
-    animation-range: entry 0% entry 38%;
-  }
-  .chapter .sketch > * {
-    animation: diagram-detail-enter linear both;
-    animation-timeline: view();
-    animation-range: entry 8% entry 48%;
-  }
+.chapter .sketch > * {
+  transition: opacity 700ms ease, transform 700ms cubic-bezier(.2,.7,.2,1);
 }
-/* Keep scroll-linked motion gentle and fully optional. */
+.chapter .sketch:not(.is-visible) > * {
+  opacity: .35;
+}
+.chapter .sketch.is-visible > * {
+  opacity: 1;
+}
 @media (prefers-reduced-motion: reduce) {
   .chapter .sketch,
   .chapter .sketch > * {
-    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
