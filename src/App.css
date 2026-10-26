@@ -31,8 +31,12 @@
 .hero-clue>span{font:8px var(--mono);letter-spacing:1.2px;color:var(--orange)}
 .hero-clue p{font:500 13px/1.45 var(--display);color:var(--ink);margin:6px 0}
 .hero-clue small{font:7px var(--mono);letter-spacing:.7px;color:#7b8375}
-.footer-email-label{font-size:12px;color:#72766b;margin-top:22px}
+.footer-email-label{font-size:12px;line-height:1.9;color:#72766b;margin-top:22px;max-width:560px}
 .footer-email-label a{color:var(--deep);border-bottom:1px solid #b9b8a9;padding-bottom:3px}
 .footer-email-label a:hover{color:var(--orange)}
+.footer-email-label a+a{margin-left:10px}
+.footer-cta{display:inline-flex;align-items:center;gap:12px}
+.footer-cta:hover span{transform:translate(3px,-3px)}
+.footer-cta span{display:inline-block;transition:transform .2s ease}
 @media(max-width:760px){.hero-clue{top:calc(50% + 82px)}}
 @media(max-width:470px){.hero-clue{top:calc(50% + 64px)}.hero-clue p{font-size:11px}.hero-clue small{font-size:6px}}
