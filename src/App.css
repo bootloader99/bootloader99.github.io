@@ -77,7 +77,8 @@
 /* The hero question has one small, intentional interaction. */
 .hero-core.is-revealed{transform:rotate(351deg) scale(1.035);box-shadow:12px 14px 0 #b4c4aa,0 0 0 7px #344c3b18}
 .hero-core:focus-visible{outline:2px solid var(--orange);outline-offset:7px}
-.hero-question-note{position:absolute;z-index:6;left:50%;top:calc(50% + 88px);width:max-content;max-width:210px;padding:10px 13px;background:#f8f5ed;border:1px solid #d2d0c2;color:#52634f;font:10px/1.5 var(--mono);text-align:center;box-shadow:4px 5px 0 #242d2710;opacity:0;transform:translate(-50%,-5px);pointer-events:none;transition:opacity .22s ease,transform .22s ease}
+.hero-question-note{position:absolute;z-index:6;left:50%;top:calc(50% + 88px);width:max-content;max-width:210px;padding:11px 14px;background:#f8f5ed;border:1px solid #c9c8b9;border-radius:12px;color:#52634f;font:10px/1.5 var(--mono);text-align:center;box-shadow:4px 5px 0 #242d2710;opacity:0;transform:translate(-50%,-5px);pointer-events:none;transition:opacity .22s ease,transform .22s ease}
+.hero-question-note:before{content:"";position:absolute;left:50%;top:-6px;width:10px;height:10px;background:#f8f5ed;border-left:1px solid #c9c8b9;border-top:1px solid #c9c8b9;transform:translateX(-50%) rotate(45deg)}
 .hero-question-note.is-visible{opacity:1;transform:translate(-50%,0)}
 .hero-art:has(.hero-core.is-revealed) .object-phone{transform:rotate(-8deg) translateY(-3px)}
 .hero-art:has(.hero-core.is-revealed) .object-code{transform:rotate(5deg) translateY(-3px)}
