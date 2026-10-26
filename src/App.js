@@ -13,12 +13,12 @@ function App() {
     </header>
 
     <section className="hero">
-      <div className="hero-topline"><span><i/> INDEPENDENT DEVELOPER IN THE MAKING</span><span>KERALA, INDIA</span></div>
+      <div className="hero-topline"><span><i/> INDEPENDENT DEVELOPER IN THE MAKING</span><span>SOMEWHERE ON EARTH</span></div>
       <div className="hero-layout">
         <div className="hero-main">
           <p className="hero-pretitle">A FEW TURNS THAT BROUGHT ME HERE</p>
           <h1>I started with<br/>a question:<br/><em>how does this<br/>actually work?</em></h1>
-          <p className="hero-description">I’m Hisham, a mobile developer from Kerala learning to make games. This is a little of the path between tinkering with Android and building things of my own.</p>
+          <p className="hero-description">I’m Hisham, a mobile developer learning to make games. This is a little of the path between tinkering with Android and building things of my own.</p>
           <a className="scroll-cue" href="#story"><span className="scroll-line"/> SCROLL THROUGH THE STORY <b>↓</b></a>
         </div>
         <div className="hero-art" aria-label="An abstract illustration of curiosity connecting systems, apps and games">
@@ -58,7 +58,7 @@ function App() {
       <div><div className="section-index">WHAT I READ ABOUT</div><h2>Beyond the<br/><em>usual stack.</em></h2><p>Linux internals, bootloaders and low-level programming are the topics I tend to read about when I’m away from app work. I’m still learning the fundamentals, but I like seeing how the pieces connect.</p><div className="curiosity-tags"><span>LINUX</span><span>OPERATING SYSTEMS</span><span>BOOTLOADERS</span><span>ASSEMBLY</span></div></div>
     </section>
 
-    <footer className="site-footer" id="contact"><div className="footer-top"><div className="section-index">IF YOU WANT TO SAY HELLO</div><h2>That’s the story<br/><em>so far.</em></h2><p>If you’ve played one of my games, want to talk about an app, or just have something interesting to share, I’d be glad to hear from you.</p><a className="footer-cta" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hmuhammed546%40gmail.com&amp;su=Hello%20Hisham" target="_blank" rel="noreferrer">Say hello <span>↗</span></a></div><div className="footer-bottom"><a className="wordmark" href="#top">h<span>.</span></a><span>HISHAM · KERALA</span><div><a href="https://github.com/Hisham546" target="_blank" rel="noreferrer">GITHUB ↗</a><a href="https://www.linkedin.com/in/muhammed-hisham-m-i-56a564225/" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="mailto:hmuhammed546@gmail.com">EMAIL ↗</a></div></div></footer>
+    <footer className="site-footer" id="contact"><div className="footer-top"><div className="section-index">IF YOU WANT TO SAY HELLO</div><h2>That’s the story<br/><em>so far.</em></h2><p>If you’ve played one of my games, want to talk about an app, or just have something interesting to share, I’d be glad to hear from you.</p><a className="footer-cta" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hmuhammed546%40gmail.com&amp;su=Hello%20Hisham" target="_blank" rel="noreferrer">Say hello <span>↗</span></a></div><div className="footer-bottom"><a className="wordmark" href="#top">h<span>.</span></a><span>HISHAM · PLANET EARTH</span><div><a href="https://github.com/Hisham546" target="_blank" rel="noreferrer">GITHUB ↗</a><a href="https://www.linkedin.com/in/muhammed-hisham-m-i-56a564225/" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="mailto:hmuhammed546@gmail.com">EMAIL ↗</a></div></div></footer>
   </main>;
 }
 
