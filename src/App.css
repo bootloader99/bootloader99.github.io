@@ -27,10 +27,6 @@
 .hero-core{border:0;cursor:pointer;padding:0;font:inherit;transition:transform .24s ease,box-shadow .24s ease;position:relative;z-index:5}
 .hero-core:hover,.hero-core:focus-visible{transform:rotate(0deg) scale(1.07);box-shadow:12px 14px 0 #b4c4aa,0 0 0 7px #344c3b18;outline:none}
 .hero-core span{display:block}
-.hero-clue{position:absolute;left:50%;top:calc(50% + 92px);transform:translateX(-50%);width:min(270px,68%);text-align:center;z-index:3;pointer-events:none}
-.hero-clue>span{font:8px var(--mono);letter-spacing:1.2px;color:var(--orange)}
-.hero-clue p{font:500 13px/1.45 var(--display);color:var(--ink);margin:6px 0}
-.hero-clue small{font:7px var(--mono);letter-spacing:.7px;color:#7b8375}
 .footer-email-label{font-size:12px;line-height:1.9;color:#72766b;margin-top:22px;max-width:560px}
 .footer-email-label a{color:var(--deep);border-bottom:1px solid #b9b8a9;padding-bottom:3px}
 .footer-email-label a:hover{color:var(--orange)}
@@ -38,5 +34,3 @@
 .footer-cta{display:inline-flex;align-items:center;gap:12px}
 .footer-cta:hover span{transform:translate(3px,-3px)}
 .footer-cta span{display:inline-block;transition:transform .2s ease}
-@media(max-width:760px){.hero-clue{top:calc(50% + 82px)}}
-@media(max-width:470px){.hero-clue{top:calc(50% + 64px)}.hero-clue p{font-size:11px}.hero-clue small{font-size:6px}}
