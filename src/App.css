@@ -4,3 +4,21 @@
 @media(max-width:760px){.portfolio{padding:0 5%}.site-header{height:70px}.hero-layout{grid-template-columns:1fr;min-height:unset;padding-top:30px}.hero-main{padding:35px 0 15px}.hero h1{font-size:clamp(59px,12vw,90px)}.hero-art{height:390px;max-width:530px;width:100%;margin:0 auto}.hero-art:before{width:73%}.hero-description{max-width:460px}.story-intro{grid-template-columns:1fr;gap:25px;padding:78px 0 45px}.chapter{grid-template-columns:1fr;gap:26px;padding:55px 1%}.chapter-reverse .chapter-copy,.chapter-reverse .sketch{order:initial}.chapter h3{max-width:580px}.sketch{height:290px}.work-section{padding:78px 0}.work-heading{align-items:start;flex-direction:column;gap:18px}.work-heading p{max-width:460px}.work-grid{grid-template-columns:1fr}.work-art-business,.work-art-games{height:270px}.curiosity-section{grid-template-columns:1fr;gap:30px;padding:50px 7%}.curiosity-stamp{width:105px;height:105px}.site-footer{padding-top:70px}.footer-bottom{flex-wrap:wrap;padding:18px 0}.footer-bottom>span{order:3;width:100%}}
 @media(max-width:470px){.header-note{font-size:8px;letter-spacing:.4px}.header-contact{font-size:9px}.hero-topline{font-size:7px;letter-spacing:.3px;gap:10px}.hero-topline>span:last-child{text-align:right}.hero h1{font-size:57px}.hero-description{font-size:13px}.hero-art{height:320px}.hero-art-label{font-size:7px}.hero-core{width:88px;height:88px}.hero-core span{font-size:58px}.object-phone{transform:scale(.8) rotate(-12deg);left:7%}.object-code{right:7%;transform:scale(.8) rotate(9deg)}.object-game{left:16%;bottom:13%;transform:scale(.8) rotate(11deg)}.hero-foot{font-size:7px;letter-spacing:.4px}.story-intro h2,.work-heading h2,.curiosity-section h2,.footer-top h2{font-size:39px}.chapter h3{font-size:38px}.chapter-copy>p{font-size:12px}.sketch{height:260px}.work-card-copy{padding:21px 18px}.work-card-copy p{min-height:unset}.work-links{flex-wrap:wrap}.footer-bottom>div{gap:12px}.footer-bottom>div a{font-size:7px}.footer-bottom>span{font-size:7px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Narrative refinement: fewer repeated motifs, real product art, and quieter copy. */
+.hero h1{font-size:clamp(54px,6.9vw,92px)}
+.hero h1 em{color:var(--deep)}
+.hero-art:before{background:#e8e2d7}.hero-art:after{background:#e1e7dc}
+.story-intro{padding-top:88px;padding-bottom:48px}
+.chapter{min-height:420px;padding-top:54px;padding-bottom:54px}
+.chapter h3{max-width:520px}
+.work-grid{align-items:start}
+.work-art-business{display:block!important;padding:0!important;background:#e8e3d9!important;overflow:hidden;line-height:0}
+.business-cover-link{display:block;width:100%;line-height:0}
+.business-cover{display:block;width:100%;height:auto;aspect-ratio:1672/940;object-fit:contain}
+.work-card-copy{padding-top:26px}
+.work-games .work-art-games{min-height:300px}
+.work-card{height:100%}
+.curiosity-section{margin-top:70px}
+.footer-top{padding-top:72px}
+@media(max-width:700px){.hero h1{font-size:clamp(49px,12vw,76px)}.business-cover{aspect-ratio:1672/940}.chapter{min-height:0}}
