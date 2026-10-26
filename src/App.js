@@ -54,7 +54,7 @@ function App() {
         <nav className="topnav" aria-label="Main navigation">
           <a href="#world">Explore</a><a href="#featured">Featured work</a><a href="#about">About</a>
         </nav>
-        <a className="top-contact" href="mailto:hmuhammed7@gmail.com">Say hello <span>↗</span></a>
+        <a className="top-contact" href="mailto:hmuhammed546@gmail.com">Say hello <span>↗</span></a>
       </header>
 
       <section className="intro" id="top">
@@ -80,7 +80,7 @@ function App() {
           <h2>{active === "workshop" ? <>Built to be<br /><em>made your own.</em></> : active === "arcade" ? <>Small games.<br /><em>Lots of heart.</em></> : <>Curious by nature.<br /><em>Developer by craft.</em></>}</h2>
           {active === "workshop" ? <><p>My main project is Business Manager, a local-first React Native CLI template for running everyday business workflows. It includes customers, products, quotations, invoices, expenses, reports and PDF export, with no backend required.</p><div className="feature-tags"><span>React Native CLI</span><span>TypeScript</span><span>SQLite</span><span>Offline-first</span></div><div className="feature-actions"><a className="button button-dark" href="https://hmuhammed7.gumroad.com/l/snpiki" target="_blank" rel="noreferrer">Get Business Manager · $39 <span>↗</span></a><a className="text-link" href="https://github.com/Hisham546/Business-manager" target="_blank" rel="noreferrer">Source & details <span>↗</span></a></div></> :
           active === "arcade" ? <><p>I like making compact games with a clear idea at their core. I've experimented with Unity and published a browser-based Brick Breaker on itch.io, alongside smaller puzzle and arcade prototypes.</p><div className="feature-tags"><span>Unity 6</span><span>C#</span><span>HTML5</span><span>Game feel</span></div><div className="feature-actions"><a className="button button-dark" href="https://itch.io/" target="_blank" rel="noreferrer">Find me on itch.io <span>↗</span></a><a className="text-link" href="https://github.com/Hisham546" target="_blank" rel="noreferrer">Game projects <span>↗</span></a></div></> :
-          <><p>I'm a mobile developer with around four years of experience building React Native apps for Android and iOS. Outside client work, I'm drawn to game development, how operating systems work, and the details that make software feel thoughtful.</p><div className="feature-tags"><span>React Native</span><span>JavaScript</span><span>TypeScript</span><span>Unity</span></div><div className="feature-actions"><a className="button button-dark" href="mailto:hmuhammed7@gmail.com">Let's talk <span>↗</span></a><a className="text-link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a></div></>}
+          <><p>I'm a mobile developer with around four years of experience building React Native apps for Android and iOS. Outside client work, I'm drawn to game development, how operating systems work, and the details that make software feel thoughtful.</p><div className="feature-tags"><span>React Native</span><span>JavaScript</span><span>TypeScript</span><span>Unity</span></div><div className="feature-actions"><a className="button button-dark" href="mailto:hmuhammed546@gmail.com">Let's talk <span>↗</span></a><a className="text-link" href="https://www.linkedin.com/in/muhammed-hisham-m-i-56a564225/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a></div></>}
         </div>
         <div className="feature-visual" aria-hidden="true">
           {active === "workshop" ? <div className="product-window"><div className="window-bar"><i/><i/><i/><span>business-manager</span></div><div className="mini-app"><aside><b>BM.</b><i/><i/><i/><i/></aside><div className="mini-content"><small>GOOD MORNING</small><strong>Your business,<br/>at a glance.</strong><div className="mini-stats"><i/><i/><i/></div><div className="mini-chart"><span/><span/><span/><span/><span/><span/><span/></div></div></div><span className="visual-sticker">BUILT TO RESKIN ↗</span></div> :
@@ -90,7 +90,7 @@ function App() {
       </section>
 
       <section className="about-strip" id="about"><div><span className="kicker">A FEW THINGS I CARE ABOUT</span><h2>Good software is thoughtful software.</h2></div><div className="about-points"><p><span>01</span>Useful details over flashy features</p><p><span>02</span>Learning how things work underneath</p><p><span>03</span>Building independently, one release at a time</p></div></section>
-      <footer className="footer"><a className="brand" href="#top"><span className="brand-mark">H<span>.</span></span><span>hisham<span className="brand-muted">dev</span></span></a><p>Made with care, somewhere in Kerala.</p><div><a href="https://github.com/Hisham546" target="_blank" rel="noreferrer">GitHub ↗</a><a href="mailto:hmuhammed7@gmail.com">Email ↗</a></div></footer>
+      <footer className="footer"><a className="brand" href="#top"><span className="brand-mark">H<span>.</span></span><span>hisham<span className="brand-muted">dev</span></span></a><p>Made with care, somewhere in Kerala.</p><div><a href="https://github.com/Hisham546" target="_blank" rel="noreferrer">GitHub ↗</a><a href="mailto:hmuhammed546@gmail.com">Email ↗</a></div></footer>
     </main>
   );
 }
