@@ -71,6 +71,8 @@ function CursorPlayfulness() {
 }
 
 function App() {
+  const [questionRevealed, setQuestionRevealed] = useState(false);
+
   return <>
     <CursorPlayfulness />
     <main className="portfolio" id="top">
@@ -92,7 +94,8 @@ function App() {
           <div className="hero-art-label label-top">A QUESTION, YEARS AGO</div>
           <div className="hero-sun"/>
           <div className="hero-ring ring-a"/><div className="hero-ring ring-b"/><div className="hero-ring ring-c"/>
-          <div className="hero-core" aria-hidden="true"><span>?</span></div>
+          <button className={`hero-core${questionRevealed ? " is-revealed" : ""}`} type="button" aria-expanded={questionRevealed} aria-controls="hero-question-note" aria-label={questionRevealed ? "Hide the thought" : "Reveal a thought"} onClick={() => setQuestionRevealed((shown) => !shown)}><span>?</span></button>
+          <div className={`hero-question-note${questionRevealed ? " is-visible" : ""}`} id="hero-question-note" aria-live="polite" aria-hidden={!questionRevealed}>One question can lead a long way.</div>
           <div className="orbit-object object-phone"><i/><i/><i/><b/></div>
           <div className="orbit-object object-code"><span>{"{ }"}</span></div>
           <div className="orbit-object object-game"><span>✳</span></div>
