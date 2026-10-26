@@ -85,7 +85,7 @@ function App() {
         <div className="hero-main">
           <p className="hero-pretitle">A FEW TURNS THAT BROUGHT ME HERE</p>
           <h1>I started with<br/>a question:<br/><em>how does this<br/>actually work?</em></h1>
-          <p className="hero-description">I’m Hisham, a mobile developer learning to make games. This is a little of the path between tinkering with Android and building things of my own.</p>
+          <p className="hero-description">I’m Hisham. I build mobile apps, make small games, and still get distracted by questions about how things work. This is how those interests have taken me from tinkering with Android to making things of my own.</p>
           <a className="scroll-cue" href="#story"><span className="scroll-line"/> SCROLL THROUGH THE STORY <b>↓</b></a>
         </div>
         <div className="hero-art" aria-label="An abstract illustration of curiosity connecting systems, apps and games">
@@ -104,7 +104,7 @@ function App() {
 
     <section className="story-intro" id="story">
       <div className="section-index">THE SHORT VERSION</div>
-      <div><h2>Not a timeline of titles.<br/><em>Just a few turning points.</em></h2><p>Some things started as late-night experiments; others came from work. They don’t fit into one neat job title, so I’ve put the story here instead.</p></div>
+      <div><h2>Not a timeline of titles.<br/><em>Just a few turning points.</em></h2><p>Some started as experiments; others came from work. These are a few of the things that changed what I wanted to make next.</p></div>
     </section>
 
     <section className="chapters" aria-label="My journey">
@@ -113,7 +113,7 @@ function App() {
 
     <section className="work-section" id="work">
       <div className="section-index">CURRENT BUILDS / 02</div>
-      <div className="work-heading"><h2>Two things<br/><em>you can try.</em></h2><p>An app template for developers, and small games made while learning Unity.</p></div>
+      <div className="work-heading"><h2>Two things<br/><em>you can try.</em></h2><p>One is an app template other developers can build on. The other is where I get to experiment with games.</p></div>
       <div className="work-grid">
         <article className="work-card work-business"><div className="work-card-top"><span>01 / APP TEMPLATE</span><span className="work-symbol">↗</span></div><a className="business-cover-link" href="https://hmuhammed7.gumroad.com/l/snpiki" target="_blank" rel="noreferrer" aria-label="View Business Manager product"><img className="business-cover" src={businessManagerCover} alt="Business Manager app showcase with dashboard, customers and reports screens"/></a><div className="work-card-copy"><div className="work-label">REACT NATIVE · TYPESCRIPT · SQLITE</div><h3>Business Manager</h3><p>A local-first business management template for customers, sales, quotations, invoices, expenses and reports. Built to be customised, with no backend required.</p><div className="work-links"><a href="https://hmuhammed7.gumroad.com/l/snpiki" target="_blank" rel="noreferrer">Explore the product ↗</a><a href="https://github.com/Hisham546/Business-manager" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></article>
         <article className="work-card work-games"><div className="work-card-top"><span>02 / LEARNING IN PUBLIC</span><span className="work-symbol">✳</span></div><div className="work-art-games"><div className="game-tile tile-a">+</div><div className="game-tile tile-b">✦</div><div className="game-tile tile-c">↗</div><div className="game-tile tile-d">●</div><div className="game-word">PLAY<br/><em>TEST</em><br/>REPEAT</div></div><div className="work-card-copy"><div className="work-label">UNITY · C# · SMALL 2D GAMES</div><h3>Making games</h3><p>Small experiments, puzzle ideas and arcade projects. I've published a browser-based Brick Breaker and other early work while learning by making.</p><div className="work-links"><a href="https://warpredator.itch.io/" target="_blank" rel="noreferrer">Play my games on itch.io ↗</a></div></div></article>
@@ -122,7 +122,7 @@ function App() {
 
     <section className="curiosity-section">
       <div className="curiosity-stamp">ONE DAY<br/>AT A TIME<br/><span>✳</span></div>
-      <div><div className="section-index">WHAT I’M WORKING TOWARDS</div><h2>A game of<br/><em>my own.</em></h2><p>One day, I’d love to make a complete PC game entirely on my own. For now, I’m learning by making small games, trying ideas and figuring things out as I go. There’s a lot I haven’t learned yet, and that’s part of what keeps it exciting.</p><div className="curiosity-tags"><span>SMALL EXPERIMENTS</span><span>UNITY</span><span>ONE STEP AT A TIME</span></div></div>
+      <div><div className="section-index">WHAT I’M WORKING TOWARDS</div><h2>A game of<br/><em>my own.</em></h2><p>The thing I keep coming back to is making a full PC game on my own, from the first idea to something people can actually play. I’m nowhere near there yet. For now, it’s small games, unfinished ideas, and learning one piece at a time.</p><div className="curiosity-tags"><span>SMALL GAMES</span><span>UNITY</span><span>THE LONG GAME</span></div></div>
     </section>
 
     <footer className="site-footer" id="contact"><div className="footer-top"><div className="section-index">IF YOU WANT TO SAY HELLO</div><h2>That’s the story<br/><em>so far.</em></h2><p>If you’ve played one of my games, want to talk about an app, or just have something interesting to share, I’d be glad to hear from you.</p><a className="footer-cta" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hmuhammed546%40gmail.com&amp;su=Hello%20Hisham" target="_blank" rel="noreferrer">Say hello <span>↗</span></a></div><div className="footer-bottom"><a className="wordmark" href="#top">h<span>.</span></a><span>HISHAM · PLANET EARTH</span><div><a href="https://github.com/Hisham546" target="_blank" rel="noreferrer">GITHUB ↗</a><a href="https://www.linkedin.com/in/muhammed-hisham-m-i-56a564225/" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hmuhammed546%40gmail.com&amp;su=Hello%20Hisham" target="_blank" rel="noreferrer">EMAIL ↗</a></div></div></footer>
