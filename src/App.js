@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import chapters from "./data/chapters";
 import Chapter from "./components/Chapter";
 import businessManagerCover from "./assets/business-manager-showcase.png";
 
 function App() {
+  const [clueIndex, setClueIndex] = useState(0);
+  const clues = [
+    { symbol: "?", label: "A QUESTION", text: "What happens after unlocking the bootloader?" },
+    { symbol: "{ }", label: "A SMALL EXPERIMENT", text: "Can I build this myself, from scratch?" },
+    { symbol: "▶", label: "A NEW LEVEL", text: "What if I made the game I want to play?" },
+  ];
+
   return <main className="portfolio" id="top">
     <header className="site-header">
       <a className="wordmark" href="#top" aria-label="Hisham, back to top">h<span>.</span></a>
@@ -25,11 +32,12 @@ function App() {
           <div className="hero-art-label label-top">A QUESTION, YEARS AGO</div>
           <div className="hero-sun"/>
           <div className="hero-ring ring-a"/><div className="hero-ring ring-b"/><div className="hero-ring ring-c"/>
-          <div className="hero-core"><span>?</span></div>
+          <button className="hero-core" type="button" onClick={() => setClueIndex((current) => (current + 1) % clues.length)} aria-label="Reveal another question from my journey"><span>{clues[clueIndex].symbol}</span></button>
           <div className="orbit-object object-phone"><i/><i/><i/><b/></div>
           <div className="orbit-object object-code"><span>{"{ }"}</span></div>
           <div className="orbit-object object-game"><span>✳</span></div>
           <div className="hero-art-label label-bottom">ANDROID → APPS → GAMES</div>
+          <div className="hero-clue" aria-live="polite"><span>{clues[clueIndex].label}</span><p>{clues[clueIndex].text}</p><small>CLICK THE CENTRE TO EXPLORE ↗</small></div>
         </div>
       </div>
       <div className="hero-foot"><span>ERNAKULAM, KERALA.</span><span>PERSONAL NOTES, NOT A CV.</span><span className="foot-star">✳</span></div>
@@ -58,7 +66,7 @@ function App() {
       <div><div className="section-index">WHAT I READ ABOUT</div><h2>Beyond the<br/><em>usual stack.</em></h2><p>Linux internals, bootloaders and low-level programming are the topics I tend to read about when I’m away from app work. I’m still learning the fundamentals, but I like seeing how the pieces connect.</p><div className="curiosity-tags"><span>LINUX</span><span>OPERATING SYSTEMS</span><span>BOOTLOADERS</span><span>ASSEMBLY</span></div></div>
     </section>
 
-    <footer className="site-footer" id="contact"><div className="footer-top"><div className="section-index">IF YOU WANT TO SAY HELLO</div><h2>That’s the story<br/><em>so far.</em></h2><p>One day, I’d like to make a game with a small team of my own. For now, I’m building the skills and finishing small projects one at a time.</p><a className="footer-cta" href="mailto:hmuhammed546@gmail.com">Have something in mind? Say hello <span>↗</span></a></div><div className="footer-bottom"><a className="wordmark" href="#top">h<span>.</span></a><span>HISHAM · KERALA, INDIA</span><div><a href="https://github.com/Hisham546" target="_blank" rel="noreferrer">GITHUB ↗</a><a href="https://www.linkedin.com/in/muhammed-hisham-m-i-56a564225/" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="mailto:hmuhammed546@gmail.com">EMAIL ↗</a></div></div></footer>
+    <footer className="site-footer" id="contact"><div className="footer-top"><div className="section-index">IF YOU WANT TO SAY HELLO</div><h2>That’s the story<br/><em>so far.</em></h2><p>I’m making small 2D games on my own now. The bigger dream is to create a complete PC game solo, from the first idea to the final build.</p><a className="footer-cta" href="mailto:hmuhammed546@gmail.com?subject=Hello%20Hisham">Have something in mind? Say hello <span>↗</span></a><p className="footer-email-label">Or write to me directly: <a href="mailto:hmuhammed546@gmail.com">hmuhammed546@gmail.com</a></p></div><div className="footer-bottom"><a className="wordmark" href="#top">h<span>.</span></a><span>HISHAM · KERALA, INDIA</span><div><a href="https://github.com/Hisham546" target="_blank" rel="noreferrer">GITHUB ↗</a><a href="https://www.linkedin.com/in/muhammed-hisham-m-i-56a564225/" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="mailto:hmuhammed546@gmail.com">EMAIL ↗</a></div></div></footer>
   </main>;
 }
 
