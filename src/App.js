@@ -1,11 +1,78 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
 import chapters from "./data/chapters";
 import Chapter from "./components/Chapter";
 import businessManagerCover from "./assets/business-manager-showcase.png";
 
+function CursorPlayfulness() {
+  const [cursor, setCursor] = useState(null);
+  const [bursts, setBursts] = useState([]);
+  const nextId = useRef(0);
+
+  useEffect(() => {
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (!finePointer.matches || reducedMotion.matches) return undefined;
+
+    let frame = null;
+    let latestPoint = null;
+    const handleMove = (event) => {
+      latestPoint = { x: event.clientX, y: event.clientY };
+      if (frame === null) {
+        frame = window.requestAnimationFrame(() => {
+          setCursor(latestPoint);
+          frame = null;
+        });
+      }
+    };
+
+    const handleClick = (event) => {
+      const id = nextId.current++;
+      const burst = Array.from({ length: 6 }, (_, index) => ({
+        id: id + index,
+        x: event.clientX,
+        y: event.clientY,
+        angle: (Math.PI * 2 * index) / 6,
+        distance: 28 + (index % 3) * 13,
+        emoji: index % 3 === 0 ? "✨" : index % 3 === 1 ? "✳" : "🎮",
+      }));
+      setBursts((current) => [...current, ...burst]);
+      window.setTimeout(() => {
+        const ids = new Set(burst.map((item) => item.id));
+        setBursts((current) => current.filter((item) => !ids.has(item.id)));
+      }, 720);
+    };
+
+    window.addEventListener("pointermove", handleMove, { passive: true });
+    window.addEventListener("click", handleClick);
+    return () => {
+      window.removeEventListener("pointermove", handleMove);
+      window.removeEventListener("click", handleClick);
+      if (frame !== null) window.cancelAnimationFrame(frame);
+    };
+  }, []);
+
+  if (!cursor) return null;
+  return <>
+    <span className="cursor-spark" aria-hidden="true" style={{ left: cursor.x, top: cursor.y }}>✦</span>
+    {bursts.map((burst) => <span
+      className="click-spark"
+      aria-hidden="true"
+      key={burst.id}
+      style={{
+        left: burst.x,
+        top: burst.y,
+        "--spark-x": `${Math.cos(burst.angle) * burst.distance}px`,
+        "--spark-y": `${Math.sin(burst.angle) * burst.distance}px`,
+      }}
+    >{burst.emoji}</span>)}
+  </>;
+}
+
 function App() {
-  return <main className="portfolio" id="top">
+  return <>
+    <CursorPlayfulness />
+    <main className="portfolio" id="top">
     <header className="site-header">
       <a className="wordmark" href="#top" aria-label="Hisham, back to top">h<span>.</span></a>
       <div className="header-note">PERSONAL LOG / 001</div>
@@ -58,7 +125,6 @@ function App() {
     </section>
 
     <footer className="site-footer" id="contact"><div className="footer-top"><div className="section-index">IF YOU WANT TO SAY HELLO</div><h2>That’s the story<br/><em>so far.</em></h2><p>If you’ve played one of my games, want to talk about an app, or just have something interesting to share, I’d be glad to hear from you.</p><a className="footer-cta" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hmuhammed546%40gmail.com&amp;su=Hello%20Hisham" target="_blank" rel="noreferrer">Say hello <span>↗</span></a></div><div className="footer-bottom"><a className="wordmark" href="#top">h<span>.</span></a><span>HISHAM · PLANET EARTH</span><div><a href="https://github.com/Hisham546" target="_blank" rel="noreferrer">GITHUB ↗</a><a href="https://www.linkedin.com/in/muhammed-hisham-m-i-56a564225/" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hmuhammed546%40gmail.com&amp;su=Hello%20Hisham" target="_blank" rel="noreferrer">EMAIL ↗</a></div></div></footer>
-  </main>;
-}
+  </main>\n  </>;\n}
 
 export default App;
