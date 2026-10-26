@@ -125,6 +125,7 @@ function App() {
     </section>
 
     <footer className="site-footer" id="contact"><div className="footer-top"><div className="section-index">IF YOU WANT TO SAY HELLO</div><h2>That’s the story<br/><em>so far.</em></h2><p>If you’ve played one of my games, want to talk about an app, or just have something interesting to share, I’d be glad to hear from you.</p><a className="footer-cta" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hmuhammed546%40gmail.com&amp;su=Hello%20Hisham" target="_blank" rel="noreferrer">Say hello <span>↗</span></a></div><div className="footer-bottom"><a className="wordmark" href="#top">h<span>.</span></a><span>HISHAM · PLANET EARTH</span><div><a href="https://github.com/Hisham546" target="_blank" rel="noreferrer">GITHUB ↗</a><a href="https://www.linkedin.com/in/muhammed-hisham-m-i-56a564225/" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hmuhammed546%40gmail.com&amp;su=Hello%20Hisham" target="_blank" rel="noreferrer">EMAIL ↗</a></div></div></footer>
-  </main>\n  </>;\n}
+  </main>
+  </>;\n}
 
 export default App;
