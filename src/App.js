@@ -13,7 +13,7 @@ function App() {
     </header>
 
     <section className="hero">
-      <div className="hero-topline"><span><i/> INDEPENDENT DEVELOPER IN THE MAKING</span><span>ERNAKULAM, KERALA · INDIA</span></div>
+      <div className="hero-topline"><span><i/> INDEPENDENT DEVELOPER IN THE MAKING</span><span>KERALA, INDIA</span></div>
       <div className="hero-layout">
         <div className="hero-main">
           <p className="hero-pretitle">A FEW TURNS THAT BROUGHT ME HERE</p>
@@ -32,7 +32,7 @@ function App() {
           <div className="hero-art-label label-bottom">ANDROID → APPS → GAMES</div>
         </div>
       </div>
-      <div className="hero-foot"><span>ERNAKULAM, KERALA.</span><span>PERSONAL NOTES, NOT A CV.</span><span className="foot-star">✳</span></div>
+      <div className="hero-foot"><span>MADE BETWEEN APPS & GAMES.</span><span>PERSONAL NOTES, NOT A CV.</span><span className="foot-star">✳</span></div>
     </section>
 
     <section className="story-intro" id="story">
@@ -58,7 +58,7 @@ function App() {
       <div><div className="section-index">WHAT I READ ABOUT</div><h2>Beyond the<br/><em>usual stack.</em></h2><p>Linux internals, bootloaders and low-level programming are the topics I tend to read about when I’m away from app work. I’m still learning the fundamentals, but I like seeing how the pieces connect.</p><div className="curiosity-tags"><span>LINUX</span><span>OPERATING SYSTEMS</span><span>BOOTLOADERS</span><span>ASSEMBLY</span></div></div>
     </section>
 
-    <footer className="site-footer" id="contact"><div className="footer-top"><div className="section-index">IF YOU WANT TO SAY HELLO</div><h2>That’s the story<br/><em>so far.</em></h2><p>If you’ve played one of my games, want to talk about an app, or just have something interesting to share, I’d be glad to hear from you.</p><a className="footer-cta" href="mailto:hmuhammed546@gmail.com?subject=Hello%20Hisham">Send me an email <span>↗</span></a><p className="footer-email-label">Or email me directly at <a href="mailto:hmuhammed546@gmail.com">hmuhammed546@gmail.com</a>. <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hmuhammed546%40gmail.com" target="_blank" rel="noreferrer">Open Gmail ↗</a></p></div><div className="footer-bottom"><a className="wordmark" href="#top">h<span>.</span></a><span>HISHAM · KERALA, INDIA</span><div><a href="https://github.com/Hisham546" target="_blank" rel="noreferrer">GITHUB ↗</a><a href="https://www.linkedin.com/in/muhammed-hisham-m-i-56a564225/" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="mailto:hmuhammed546@gmail.com">EMAIL ↗</a></div></div></footer>
+    <footer className="site-footer" id="contact"><div className="footer-top"><div className="section-index">IF YOU WANT TO SAY HELLO</div><h2>That’s the story<br/><em>so far.</em></h2><p>If you’ve played one of my games, want to talk about an app, or just have something interesting to share, I’d be glad to hear from you.</p><a className="footer-cta" href="mailto:hmuhammed546@gmail.com?subject=Hello%20Hisham">Say hello <span>↗</span></a></div><div className="footer-bottom"><a className="wordmark" href="#top">h<span>.</span></a><span>HISHAM · KERALA</span><div><a href="https://github.com/Hisham546" target="_blank" rel="noreferrer">GITHUB ↗</a><a href="https://www.linkedin.com/in/muhammed-hisham-m-i-56a564225/" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="mailto:hmuhammed546@gmail.com">EMAIL ↗</a></div></div></footer>
   </main>;
 }
 
