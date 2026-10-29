@@ -168,4 +168,4 @@
 
 
 /* Give the portfolio owner's name a quiet accent in the introduction. */
-.hero-name-highlight{color:var(--deep);font-weight:700;text-decoration:underline;text-decoration-color:var(--orange);text-decoration-thickness:2px;text-underline-offset:4px}
+.hero-name-highlight{color:var(--deep);font-weight:700;text-decoration:underline;text-decoration-color:var(--orange);text-decoration-thickness:1px;text-underline-offset:5px;text-decoration-skip-ink:auto}
