@@ -165,3 +165,7 @@
   .architecture-flow>b{transform:rotate(90deg);justify-self:center;line-height:1}
   .project-lessons{padding:20px}
 }
+
+
+/* Give the portfolio owner's name a quiet accent in the introduction. */
+.hero-name-highlight{color:var(--deep);font-weight:700;text-decoration:underline;text-decoration-color:var(--orange);text-decoration-thickness:2px;text-underline-offset:4px}
