@@ -94,7 +94,7 @@
 /* Business Manager: a deeper project story, opened from the existing card. */
 .business-cover-link{position:relative;display:block;width:100%;padding:0;border:0;cursor:pointer;background:#e8e3d9;text-align:left;overflow:hidden}
 .business-cover-link:focus-visible{outline:2px solid var(--orange);outline-offset:-4px}
-.business-cover-hint{position:absolute;right:14px;bottom:14px;display:flex;align-items:center;gap:16px;padding:10px 12px;background:#f8f5edeb;border:1px solid #d4d0c3;color:var(--deep);font:9px var(--mono);letter-spacing:.7px;opacity:1;transform:translateY(0);transition:background .2s ease,border-color .2s ease}
+.business-cover-hint{position:absolute;right:12px;bottom:12px;display:flex;align-items:center;gap:16px;padding:10px 12px;background:#f8f5edeb;border:1px solid #d4d0c3;color:var(--deep);font:9px var(--mono);letter-spacing:.7px;opacity:1;transform:translateY(0);transition:background .2s ease,border-color .2s ease}
 .business-cover-hint b{font-size:15px;color:var(--orange);font-weight:400}
 .business-cover-link:hover .business-cover-hint,.business-cover-link:focus-visible .business-cover-hint{background:#fffdf7;border-color:var(--orange)}
 .business-cover-link:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
