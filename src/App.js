@@ -104,28 +104,71 @@ function BusinessManagerDetails({ onClose }) {
         </div>
         <img className="project-detail-cover" src={businessManagerCover} alt="Business Manager interface showcase"/>
       </div>
+      <section className="project-case-intro">
+        <span className="project-detail-number">THE ENGINEERING STORY</span>
+        <h3>Not just a collection of screens.</h3>
+        <p>I wanted to make a useful starting point for another developer: something with real business workflows, a maintainable structure, and enough native project access to customise it for a specific product. That meant thinking about data integrity and hand-off, not only the interface.</p>
+      </section>
+      <section className="project-architecture">
+        <div className="project-section-heading"><span className="project-detail-number">01 / ARCHITECTURE</span><h3>Keep responsibilities in their own place.</h3><p>The main flow separates presentation from data access, so a screen doesn't need to own every SQL query and business rule.</p></div>
+        <div className="architecture-flow" aria-label="Application architecture flow">
+          <div><span>01</span><strong>Screen</strong><small>UI and user input</small></div><b aria-hidden="true">→</b>
+          <div><span>02</span><strong>Hook</strong><small>Loading and refresh state</small></div><b aria-hidden="true">→</b>
+          <div><span>03</span><strong>Repository</strong><small>Queries and business operations</small></div><b aria-hidden="true">→</b>
+          <div><span>04</span><strong>SQLite</strong><small>Persistent local data</small></div>
+        </div>
+        <p className="project-architecture-note">This is the dominant pattern, not a claim that every screen follows an identical sequence. The goal is to keep SQL and multi-step data operations out of the UI where practical, while leaving the code understandable for someone adapting the template.</p>
+      </section>
       <div className="project-detail-grid">
         <article className="project-detail-block">
-          <span className="project-detail-number">01 / THE IDEA</span>
-          <h3>A useful foundation, not a finished business for everyone.</h3>
-          <p>The goal is to give another developer a working base they can adapt to a particular business, brand and workflow. The template is meant to be customised, not treated as a one-size-fits-all SaaS product.</p>
+          <span className="project-detail-number">02 / WHY OP-SQLITE</span>
+          <h3>A relational model for relational business data.</h3>
+          <p>Customers, products, invoices, line items and payments are connected records. SQLite gives the app structured tables, constraints and transactions without asking the buyer to provision a server. I chose <code>@op-engineering/op-sqlite</code> after checking its Android and iOS support and visible upstream maintenance activity, rather than picking a storage library just because it was familiar.</p>
+          <p className="project-tradeoff"><strong>The trade-off:</strong> this is a native dependency. Platform compatibility and native builds matter when upgrading it, and local storage does not provide cloud sync by itself.</p>
+          <a className="project-inline-link" href="https://github.com/OP-Engineering/op-sqlite" target="_blank" rel="noreferrer">OP-SQLite source ↗</a>
         </article>
         <article className="project-detail-block">
-          <span className="project-detail-number">02 / THE APPROACH</span>
-          <h3>Local-first by design.</h3>
-          <p>Business data is stored on the device with SQLite. There is no hosted backend or mandatory account service to configure before getting started, keeping the project self-contained and easier to adapt.</p>
+          <span className="project-detail-number">03 / DATA INTEGRITY</span>
+          <h3>Transactions where a workflow changes multiple records.</h3>
+          <p>A sale is more than inserting one row. The workflow validates item quantities, prices, discounts and tax, calculates totals, writes the sale and its items, and adjusts tracked stock within a database transaction. If a step fails, the operation can roll back instead of leaving half a sale behind.</p>
+          <p className="project-tradeoff"><strong>Another deliberate detail:</strong> line items keep product-name and price snapshots, so changing a product later doesn't rewrite the history of an earlier transaction.</p>
         </article>
         <article className="project-detail-block">
-          <span className="project-detail-number">03 / UNDER THE HOOD</span>
-          <h3>Built with the React Native CLI.</h3>
-          <p>React Native, TypeScript and SQLite form the core stack, with a native project setup for Android and iOS. The aim is to keep the codebase approachable for developers who want to change the UI, data model and product direction.</p>
+          <span className="project-detail-number">04 / SCHEMA EVOLUTION</span>
+          <h3>Existing installs need a path forward.</h3>
+          <p>The database tracks a schema version and applies ordered migrations. The current migration sequence reaches version 5, including changes to invoice lifecycle states and related foreign-key tables. That is important for a reusable template: a schema change should account for people who already have data, not only a fresh install.</p>
+          <p className="project-tradeoff"><strong>Design constraint:</strong> migrations must preserve existing records while changing the structure, and should be tested against both new and previously initialized databases.</p>
         </article>
         <article className="project-detail-block">
-          <span className="project-detail-number">04 / WHAT I LEARNED</span>
-          <h3>Shipping means more than screens.</h3>
-          <p>Building a sellable template pushed me to think about setup documentation, platform builds, data safety, sensible defaults and the experience of a developer opening a project they did not write.</p>
+          <span className="project-detail-number">05 / DOCUMENT LIFECYCLE</span>
+          <h3>Business rules belong close to the data operation.</h3>
+          <p>Quotations don't deduct stock. Converting an accepted quotation creates a linked invoice and marks the quotation as converted in a transaction, with guards against converting it twice. Invoice items retain their own snapshots so later product edits don't silently alter an issued document.</p>
+          <p className="project-tradeoff"><strong>Why it matters:</strong> these are business invariants, not just UI states. They need to hold even when the same operation is triggered from a different screen later.</p>
+        </article>
+        <article className="project-detail-block">
+          <span className="project-detail-number">06 / WHY REACT NATIVE CLI</span>
+          <h3>Let buyers own the native project.</h3>
+          <p>I used the React Native Community CLI rather than hiding the native projects behind a managed workflow. For a template people may rebrand, sign and distribute, direct access to Android Gradle configuration and the iOS Xcode/CocoaPods project gives them room to change the app beyond its JavaScript UI.</p>
+          <p className="project-tradeoff"><strong>The trade-off:</strong> buyers need the relevant native toolchains, and dependency changes may require platform-specific build verification.</p>
+        </article>
+        <article className="project-detail-block">
+          <span className="project-detail-number">07 / BACKUP AND RESTORE</span>
+          <h3>Offline-first also means owning data safety.</h3>
+          <p>The app supports versioned JSON export/import and a confirmed data reset. Import validates the supported backup version, payload shape, dates and record references before replacing business data. This gives users a way to move their data, but it is not automatic cloud backup or synchronization.</p>
+          <p className="project-tradeoff"><strong>Important limitation:</strong> an exported backup only protects against device loss if the user stores it somewhere separate and safe.</p>
+        </article>
+        <article className="project-detail-block">
+          <span className="project-detail-number">08 / DOCUMENTS WITHOUT A SERVER</span>
+          <h3>Generate invoice PDFs on-device.</h3>
+          <p>Invoice PDFs are created locally with <code>pdf-lib</code> and <code>@pdf-lib/fontkit</code>, including bundled Noto Sans font data. I needed to create and lay out documents, not simply display an existing PDF, so a generation library fit the job better than a viewer-only component.</p>
+          <p className="project-tradeoff"><strong>What needs care:</strong> custom invoice layouts should be checked with long descriptions, totals, special characters and the target devices' output.</p>
         </article>
       </div>
+      <section className="project-lessons">
+        <span className="project-detail-number">WHAT BUILDING A SELLABLE TEMPLATE CHANGED FOR ME</span>
+        <p>A feature can work on my machine and still be difficult for another developer to adopt. I had to consider setup instructions, identifiers, app branding, native builds, data migration, backup behavior and the less obvious edge cases that appear when records are linked together.</p>
+        <p>That's the standard I wanted to work towards: not an enterprise platform, and not a finished app for every business, but a solid base someone can understand, customise and continue building.</p>
+      </section>
       <div className="project-detail-bottom">
         <p>Want to see what you can build from it?</p>
         <a href="https://hmuhammed7.gumroad.com/l/snpiki" target="_blank" rel="noreferrer">Explore Business Manager <span>↗</span></a>
