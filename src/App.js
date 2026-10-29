@@ -195,7 +195,7 @@ function App() {
         <div className="hero-main">
           <p className="hero-pretitle">A FEW TURNS THAT BROUGHT ME HERE</p>
           <h1>I started with<br/>a question:<br/><em>how does this<br/>actually work?</em></h1>
-          <p className="hero-description">I’m Hisham. I build mobile apps, make small games, and still get distracted by questions about how things work. This is how those interests have taken me from tinkering with Android to making things of my own.</p>
+          <p className="hero-description">I’m <span className="hero-name-highlight">Hisham</span>. I build mobile apps, make small games, and still get distracted by questions about how things work. This is how those interests have taken me from tinkering with Android to making things of my own.</p>
           <a className="scroll-cue" href="#story"><span className="scroll-line"/> SCROLL THROUGH THE STORY <b>↓</b></a>
         </div>
         <div className="hero-art" aria-label="An abstract illustration of curiosity connecting systems, apps and games">
