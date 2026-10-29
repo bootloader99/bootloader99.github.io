@@ -91,9 +91,10 @@
 /* Business Manager: a deeper project story, opened from the existing card. */
 .business-cover-link{position:relative;display:block;width:100%;padding:0;border:0;cursor:pointer;background:#e8e3d9;text-align:left;overflow:hidden}
 .business-cover-link:focus-visible{outline:2px solid var(--orange);outline-offset:-4px}
-.business-cover-hint{position:absolute;right:14px;bottom:14px;display:flex;align-items:center;gap:16px;padding:10px 12px;background:#f8f5edeb;border:1px solid #d4d0c3;color:var(--deep);font:9px var(--mono);letter-spacing:.7px;opacity:0;transform:translateY(4px);transition:opacity .2s ease,transform .2s ease}
+.business-cover-hint{position:absolute;right:14px;bottom:14px;display:flex;align-items:center;gap:16px;padding:10px 12px;background:#f8f5edeb;border:1px solid #d4d0c3;color:var(--deep);font:9px var(--mono);letter-spacing:.7px;opacity:1;transform:translateY(0);transition:background .2s ease,border-color .2s ease}
 .business-cover-hint b{font-size:15px;color:var(--orange);font-weight:400}
-.business-cover-link:hover .business-cover-hint,.business-cover-link:focus-visible .business-cover-hint{opacity:1;transform:translateY(0)}
+.business-cover-link:hover .business-cover-hint,.business-cover-link:focus-visible .business-cover-hint{background:#fffdf7;border-color:var(--orange)}
+.business-cover-link:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
 .project-overlay{position:fixed;inset:0;z-index:10000;background:#1d2924b8;backdrop-filter:blur(5px);display:flex;justify-content:center;align-items:stretch;padding:20px;overflow-y:auto}
 .project-detail{position:relative;width:min(1040px,100%);max-height:100%;overflow-y:auto;background:var(--paper);border:1px solid #d8d4c8;box-shadow:0 24px 90px #10171345;padding:0 5.5% 42px;animation:project-enter .24s ease both}
 @keyframes project-enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
