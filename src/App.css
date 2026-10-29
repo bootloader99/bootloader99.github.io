@@ -18,13 +18,13 @@
 .business-cover-link{height:auto;line-height:0}
 .business-cover{aspect-ratio:auto;object-fit:cover}
 .business-cover-link{display:block;width:100%;line-height:0}
-.business-cover{display:block;width:100%;height:auto;aspect-ratio:1672/940;object-fit:contain}
+.business-cover{display:block;width:100%;height:auto;max-width:100%;object-fit:fill}
 .work-card-copy{padding-top:26px}
 .work-games .work-art-games{min-height:300px}
 .work-card{height:100%}
 .curiosity-section{margin-top:70px}
 .footer-top{padding-top:72px}
-@media(max-width:700px){.hero h1{font-size:clamp(49px,12vw,76px)}.business-cover{aspect-ratio:1672/940}.chapter{min-height:0}}
+@media(max-width:700px){.hero h1{font-size:clamp(49px,12vw,76px)}.chapter{min-height:0}}
 
 /* A small interactive detail: questions change as the visitor explores. */
 .hero-core{border:0;cursor:pointer;padding:0;font:inherit;transition:transform .24s ease,box-shadow .24s ease;position:relative;z-index:5}
