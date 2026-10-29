@@ -70,11 +70,77 @@ function CursorPlayfulness() {
   </>;
 }
 
+function BusinessManagerDetails({ onClose }) {
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [onClose]);
+
+  return <div className="project-overlay" role="presentation" onMouseDown={(event) => {
+    if (event.target === event.currentTarget) onClose();
+  }}>
+    <section className="project-detail" role="dialog" aria-modal="true" aria-labelledby="business-detail-title">
+      <div className="project-detail-top">
+        <span>PROJECT NOTES / 01</span>
+        <button type="button" className="project-close" onClick={onClose} aria-label="Close project details">CLOSE <span>×</span></button>
+      </div>
+      <div className="project-detail-hero">
+        <div className="project-detail-copy">
+          <p className="work-label">A PRODUCT I BUILT FROM SCRATCH</p>
+          <h2 id="business-detail-title">Business<br/><em>Manager.</em></h2>
+          <p>A practical starting point for developers who want to build a business management app of their own, without starting every screen and database table from zero.</p>
+          <div className="project-detail-actions">
+            <a href="https://hmuhammed7.gumroad.com/l/snpiki" target="_blank" rel="noreferrer">View the product <span>↗</span></a>
+            <a href="https://github.com/Hisham546/Business-manager" target="_blank" rel="noreferrer">Source / project repo <span>↗</span></a>
+          </div>
+        </div>
+        <img className="project-detail-cover" src={businessManagerCover} alt="Business Manager interface showcase"/>
+      </div>
+      <div className="project-detail-grid">
+        <article className="project-detail-block">
+          <span className="project-detail-number">01 / THE IDEA</span>
+          <h3>A useful foundation, not a finished business for everyone.</h3>
+          <p>The goal is to give another developer a working base they can adapt to a particular business, brand and workflow. The template is meant to be customised, not treated as a one-size-fits-all SaaS product.</p>
+        </article>
+        <article className="project-detail-block">
+          <span className="project-detail-number">02 / THE APPROACH</span>
+          <h3>Local-first by design.</h3>
+          <p>Business data is stored on the device with SQLite. There is no hosted backend or mandatory account service to configure before getting started, keeping the project self-contained and easier to adapt.</p>
+        </article>
+        <article className="project-detail-block">
+          <span className="project-detail-number">03 / UNDER THE HOOD</span>
+          <h3>Built with the React Native CLI.</h3>
+          <p>React Native, TypeScript and SQLite form the core stack, with a native project setup for Android and iOS. The aim is to keep the codebase approachable for developers who want to change the UI, data model and product direction.</p>
+        </article>
+        <article className="project-detail-block">
+          <span className="project-detail-number">04 / WHAT I LEARNED</span>
+          <h3>Shipping means more than screens.</h3>
+          <p>Building a sellable template pushed me to think about setup documentation, platform builds, data safety, sensible defaults and the experience of a developer opening a project they did not write.</p>
+        </article>
+      </div>
+      <div className="project-detail-bottom">
+        <p>Want to see what you can build from it?</p>
+        <a href="https://hmuhammed7.gumroad.com/l/snpiki" target="_blank" rel="noreferrer">Explore Business Manager <span>↗</span></a>
+      </div>
+    </section>
+  </div>;
+}
+
 function App() {
   const [questionRevealed, setQuestionRevealed] = useState(false);
+  const [businessDetailsOpen, setBusinessDetailsOpen] = useState(false);
 
   return <>
     <CursorPlayfulness />
+    {businessDetailsOpen && <BusinessManagerDetails onClose={() => setBusinessDetailsOpen(false)} />}
     <main className="portfolio" id="top">
     <header className="site-header">
       <a className="wordmark" href="#top" aria-label="Hisham, back to top">h<span>.</span></a>
@@ -118,7 +184,7 @@ function App() {
       <div className="section-index">CURRENT BUILDS / 02</div>
       <div className="work-heading"><h2>Two things<br/><em>you can try.</em></h2><p>One is an app template other developers can build on. The other is where I get to experiment with games.</p></div>
       <div className="work-grid">
-        <article className="work-card work-business"><div className="work-card-top"><span>01 / APP TEMPLATE</span><span className="work-symbol">↗</span></div><a className="business-cover-link" href="https://hmuhammed7.gumroad.com/l/snpiki" target="_blank" rel="noreferrer" aria-label="View Business Manager product"><img className="business-cover" src={businessManagerCover} alt="Business Manager app showcase with dashboard, customers and reports screens"/></a><div className="work-card-copy"><div className="work-label">REACT NATIVE · TYPESCRIPT · SQLITE</div><h3>Business Manager</h3><p>A local-first business management template for customers, sales, quotations, invoices, expenses and reports. Built to be customised, with no backend required.</p><div className="work-links"><a href="https://hmuhammed7.gumroad.com/l/snpiki" target="_blank" rel="noreferrer">Explore the product ↗</a><a href="https://github.com/Hisham546/Business-manager" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></article>
+        <article className="work-card work-business"><div className="work-card-top"><span>01 / APP TEMPLATE</span><span className="work-symbol">↗</span></div><button className="business-cover-link" type="button" onClick={() => setBusinessDetailsOpen(true)} aria-label="Open Business Manager project details"><img className="business-cover" src={businessManagerCover} alt="Business Manager app showcase"/><span className="business-cover-hint">TAKE A CLOSER LOOK <b>↗</b></span></button><div className="work-card-copy"><div className="work-label">REACT NATIVE · TYPESCRIPT · SQLITE</div><h3>Business Manager</h3><p>A local-first business management template for customers, sales, quotations, invoices, expenses and reports. Built to be customised, with no backend required.</p><div className="work-links"><a href="https://hmuhammed7.gumroad.com/l/snpiki" target="_blank" rel="noreferrer">Explore the product ↗</a><a href="https://github.com/Hisham546/Business-manager" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></article>
         <article className="work-card work-games"><div className="work-card-top"><span>02 / LEARNING IN PUBLIC</span><span className="work-symbol">✳</span></div><div className="work-art-games"><div className="game-tile tile-a">+</div><div className="game-tile tile-b">✦</div><div className="game-tile tile-c">↗</div><div className="game-tile tile-d">●</div><div className="game-word">PLAY<br/><em>TEST</em><br/>REPEAT</div></div><div className="work-card-copy"><div className="work-label">UNITY · C# · SMALL 2D GAMES</div><h3>Making games</h3><p>Small experiments, puzzle ideas and arcade projects. I've published a browser-based Brick Breaker and other early work while learning by making.</p><div className="work-links"><a href="https://warpredator.itch.io/" target="_blank" rel="noreferrer">Play my games on itch.io ↗</a></div></div></article>
       </div>
     </section>
