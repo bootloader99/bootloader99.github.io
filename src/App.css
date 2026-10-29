@@ -86,3 +86,45 @@
 .object-phone,.object-code,.object-game{transition:transform .24s ease}
 @media(max-width:470px){.hero-question-note{top:calc(50% + 70px);max-width:185px;font-size:9px}}
 @media(prefers-reduced-motion:reduce){.hero-core,.object-phone,.object-code,.object-game,.hero-question-note{transition:none}}
+
+
+/* Business Manager: a deeper project story, opened from the existing card. */
+.business-cover-link{position:relative;display:block;width:100%;padding:0;border:0;cursor:pointer;background:#e8e3d9;text-align:left;overflow:hidden}
+.business-cover-link:focus-visible{outline:2px solid var(--orange);outline-offset:-4px}
+.business-cover-hint{position:absolute;right:14px;bottom:14px;display:flex;align-items:center;gap:16px;padding:10px 12px;background:#f8f5edeb;border:1px solid #d4d0c3;color:var(--deep);font:9px var(--mono);letter-spacing:.7px;opacity:0;transform:translateY(4px);transition:opacity .2s ease,transform .2s ease}
+.business-cover-hint b{font-size:15px;color:var(--orange);font-weight:400}
+.business-cover-link:hover .business-cover-hint,.business-cover-link:focus-visible .business-cover-hint{opacity:1;transform:translateY(0)}
+.project-overlay{position:fixed;inset:0;z-index:10000;background:#1d2924b8;backdrop-filter:blur(5px);display:flex;justify-content:center;align-items:stretch;padding:20px;overflow-y:auto}
+.project-detail{position:relative;width:min(1040px,100%);max-height:100%;overflow-y:auto;background:var(--paper);border:1px solid #d8d4c8;box-shadow:0 24px 90px #10171345;padding:0 5.5% 42px;animation:project-enter .24s ease both}
+@keyframes project-enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.project-detail-top{height:57px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);font:9px var(--mono);letter-spacing:1px;color:#7d8174}
+.project-close{border:0;background:transparent;color:var(--deep);font:9px var(--mono);letter-spacing:1px;cursor:pointer;padding:10px 0 10px 10px}
+.project-close span{font-size:20px;margin-left:8px;vertical-align:-2px;color:var(--orange)}
+.project-detail-hero{display:grid;grid-template-columns:.82fr 1.18fr;gap:5%;align-items:center;padding:48px 0 43px;border-bottom:1px solid var(--line)}
+.project-detail-copy h2{font:500 clamp(48px,6vw,76px)/.9 var(--display);letter-spacing:-.075em;margin:17px 0 22px}
+.project-detail-copy h2 em{font-style:normal;color:var(--deep)}
+.project-detail-copy>p:not(.work-label){font-size:13px;line-height:1.9;color:#6d7368;max-width:350px}
+.project-detail-cover{display:block;width:100%;height:auto;object-fit:contain;background:#e8e3d9}
+.project-detail-actions{display:flex;flex-direction:column;align-items:flex-start;gap:13px;margin-top:27px}
+.project-detail-actions a,.project-detail-bottom>a{font-size:11px;font-weight:700;border-bottom:1px solid #c6c4b6;padding-bottom:6px}
+.project-detail-actions a span,.project-detail-bottom>a span{color:var(--orange);margin-left:9px}
+.project-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 8%;padding:8px 0}
+.project-detail-block{padding:27px 0 25px;border-bottom:1px solid var(--line)}
+.project-detail-number{font:9px var(--mono);letter-spacing:.8px;color:var(--orange)}
+.project-detail-block h3{font:500 24px/1.13 var(--display);letter-spacing:-.045em;margin:13px 0}
+.project-detail-block p{font-size:12px;line-height:1.9;color:#6d7368;margin:0;max-width:420px}
+.project-detail-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:28px}
+.project-detail-bottom p{font:500 19px var(--display);letter-spacing:-.5px;margin:0}
+.project-detail a:hover{color:var(--orange)}
+@media(max-width:680px){
+  .project-overlay{padding:0}
+  .project-detail{max-height:none;padding:0 6% 32px;border:0}
+  .project-detail-hero{grid-template-columns:1fr;gap:24px;padding:34px 0}
+  .project-detail-copy h2{font-size:59px}
+  .project-detail-cover{order:-1}
+  .project-detail-grid{grid-template-columns:1fr}
+  .project-detail-block{padding:24px 0}
+  .project-detail-bottom{align-items:flex-start;flex-direction:column}
+  .business-cover-hint{opacity:1;transform:none;font-size:8px}
+}
+@media(prefers-reduced-motion:reduce){.project-detail{animation:none}.business-cover-hint{transition:none}}
