@@ -135,7 +135,7 @@ function BusinessManagerDetails({ onClose }) {
         <article className="project-detail-block">
           <span className="project-detail-number">04 / SCHEMA EVOLUTION</span>
           <h3>Existing installs need a path forward.</h3>
-          <p>The database tracks a schema version and applies ordered migrations. The current migration sequence reaches version 5, including changes to invoice lifecycle states and related foreign-key tables. That is important for a reusable template: a schema change should account for people who already have data, not only a fresh install.</p>
+          <p>The database tracks a schema version and applies ordered migrations. The current migration sequence reaches version 6, including changes to invoice lifecycle states and related foreign-key tables. That is important for a reusable template: a schema change should account for people who already have data, not only a fresh install.</p>
           <p className="project-tradeoff"><strong>Design constraint:</strong> migrations must preserve existing records while changing the structure, and should be tested against both new and previously initialized databases.</p>
         </article>
         <article className="project-detail-block">
