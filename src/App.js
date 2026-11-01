@@ -223,38 +223,49 @@ function App() {
     </section>
 
     <section className="experience-section" id="experience">
-      <div className="section-index">A LITTLE OF WHAT I’VE BUILT / 03</div>
+      <div className="section-index">A FEW YEARS OF MAKING MOBILE APPS / 03</div>
       <div className="experience-heading">
-        <h2>Four years in,<br/><em>still building for mobile.</em></h2>
-        <p>Most of my working life so far has been spent building React Native apps for Android and iOS. Different products, different problems, and plenty of things to figure out along the way.</p>
+        <h2>Four years of<br/><em>building for mobile.</em></h2>
+        <p>It started with one eCommerce app and grew into a mix of projects for different people and different needs. Most of that time has been spent with React Native, building for both Android and iOS.</p>
       </div>
+
+      <div className="experience-story">
+        <article className="experience-story-entry">
+          <div className="experience-story-marker"><span>01</span><i/></div>
+          <div className="experience-story-copy">
+            <p className="work-label">THE FIRST PROJECT · ECOMMERCE</p>
+            <h3>Getting a store<br/><em>onto someone's phone.</em></h3>
+            <p>My first project was an eCommerce app for Android and iOS. I worked on the app with React Native, including the seller onboarding experience, and used Redux Toolkit to handle asynchronous state. I also worked alongside the backend and design teams as the app came together and went to the Play Store and App Store.</p>
+          </div>
+        </article>
+
+        <article className="experience-story-entry">
+          <div className="experience-story-marker"><span>02</span><i/></div>
+          <div className="experience-story-copy">
+            <p className="work-label">A MIX OF CLIENT PROJECTS</p>
+            <h3>Different apps,<br/><em>different everyday problems.</em></h3>
+            <p>After that came several React Native apps across education, ERP billing and AMC service management. I worked on features shaped by client requirements, fixed issues that showed up in production, and improved performance as newer Android versions brought their own changes. I also got familiar with the less glamorous but important part: publishing and maintaining apps on both stores.</p>
+          </div>
+        </article>
+      </div>
+
       <article className="experience-feature">
-        <div className="experience-feature-top"><span>A RECENT PROJECT</span><span>REACT NATIVE / EXPO</span></div>
+        <div className="experience-feature-top"><span>MORE RECENTLY</span><span>REACT NATIVE / EXPO</span></div>
         <div className="experience-feature-body">
           <div className="experience-feature-intro">
-            <p className="work-label">HEALTHCARE & COMMUNITY APP</p>
-            <h3>Taking an idea<br/><em>all the way to release.</em></h3>
-            <p>I worked on building a healthcare-focused social community app with React Native and Expo, taking it from the early stages through releases on Android and iOS. It brought together conversations, profile discovery and podcasts in one place. Here are a few parts I enjoyed working on.</p>
+            <p className="work-label">HEALTHCARE & COMMUNITY</p>
+            <h3>A bigger app<br/><em>with more moving parts.</em></h3>
+            <p>Most recently, I worked on a healthcare-focused social community app, building it from the ground up with React Native and Expo for Android and iOS. It brought together community features, conversations and podcasts, and gave me the chance to work on some parts of the app in more depth.</p>
           </div>
           <div className="experience-contributions">
-            <div><p><strong>Conversations that stay in sync</strong>Real-time chat for text, images and GIFs, along with live presence and last-seen updates using AWS Amplify Gen 2.</p></div>
-            <div><p><strong>A more hands-on way to discover people</strong>Swipe-based profile discovery, built with Gesture Handler and Reanimated.</p></div>
-            <div><p><strong>Audio that lives inside the app</strong>A podcast listening experience using React Native Track Player, plus production fixes and crash monitoring with Firebase Crashlytics.</p></div>
+            <div><p><strong>Chat and presence</strong>Real-time messaging for text, images and GIFs, with live user presence and last-seen updates using AWS Amplify Gen 2.</p></div>
+            <div><p><strong>Swipe-based discovery</strong>Profile discovery interactions built with React Native Gesture Handler and Reanimated.</p></div>
+            <div><p><strong>Podcasts and production care</strong>In-app audio playback with React Native Track Player, alongside production fixes, client-requested features and crash monitoring with Firebase Crashlytics.</p></div>
           </div>
         </div>
-        <div className="experience-stack"><span>REACT NATIVE</span><span>EXPO</span><span>ANDROID & iOS</span><span>AWS AMPLIFY</span><span>GESTURE HANDLER</span><span>REANIMATED</span><span>TRACK PLAYER</span></div>
+        <div className="experience-stack"><span>REACT NATIVE</span><span>EXPO</span><span>ANDROID & iOS</span><span>REDUX TOOLKIT</span><span>AWS AMPLIFY</span><span>GESTURE HANDLER</span><span>REANIMATED</span><span>TRACK PLAYER</span><span>FIREBASE CRASHLYTICS</span></div>
       </article>
-      <div className="experience-side-notes">
-        <div className="experience-side-heading">
-          <span className="project-detail-number">OTHER THINGS ALONG THE WAY</span>
-          <h3>Not every app<br/><em>solves the same problem.</em></h3>
-        </div>
-        <div className="experience-side-list">
-          <article><span>01</span><div><h4>Helping people find what they need</h4><p>An eCommerce app for Android and iOS, with work around seller onboarding and app performance.</p></div></article>
-          <article><span>02</span><div><h4>Making everyday business tasks easier</h4><p>Mobile apps across education, ERP billing and AMC service-management domains, including client-requested features, production fixes and performance work for newer Android versions.</p></div></article>
-          <article><span>03</span><div><h4>Getting apps into people's hands</h4><p>Working with backend developers, designers and clients, then publishing and maintaining apps on the Play Store and App Store.</p></div></article>
-        </div>
-      </div>
+      <p className="experience-ending">Different apps, different teams, and a lot of learning in between. Somewhere in all that, building mobile apps stopped being something I was curious about and became the thing I do.</p>
     </section>
 
     <section className="work-section" id="work">
