@@ -229,12 +229,12 @@ function App() {
         <p>Most of my working life so far has been spent building React Native apps for Android and iOS. Different products, different problems, and plenty of things to figure out along the way.</p>
       </div>
       <article className="experience-feature">
-        <div className="experience-feature-top"><span>ONE RECENT PROJECT</span><span>THE DETAILS I CAN SHARE</span></div>
+        <div className="experience-feature-top"><span>A RECENT PROJECT</span><span>REACT NATIVE / EXPO</span></div>
         <div className="experience-feature-body">
           <div className="experience-feature-intro">
             <p className="work-label">HEALTHCARE & COMMUNITY APP</p>
             <h3>Taking an idea<br/><em>all the way to release.</em></h3>
-            <p>I helped build a healthcare-focused social community app with React Native and Expo, from its early screens through releases on Android and iOS. The project is under NDA, so I can’t show its name or screens. But these are a few pieces I worked on.</p>
+            <p>I worked on building a healthcare-focused social community app with React Native and Expo, taking it from the early stages through releases on Android and iOS. It brought together conversations, profile discovery and podcasts in one place. Here are a few parts I enjoyed working on.</p>
           </div>
           <div className="experience-contributions">
             <div><p><strong>Conversations that stay in sync</strong>Real-time chat for text, images and GIFs, along with live presence and last-seen updates using AWS Amplify Gen 2.</p></div>
