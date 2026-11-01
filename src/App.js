@@ -222,6 +222,34 @@ function App() {
       {chapters.map((chapter, index) => <Chapter key={chapter.kind} chapter={chapter} index={index}/>)}
     </section>
 
+    <section className="experience-section" id="experience">
+      <div className="section-index">THE WORK BEHIND THE STORY / 03</div>
+      <div className="experience-heading">
+        <h2>Four years of<br/><em>making mobile apps.</em></h2>
+        <p>Across three teams, I worked with native Android, Flutter and React Native. The most recent part of that journey was building and shipping apps for both Android and iOS.</p>
+      </div>
+      <article className="experience-feature">
+        <div className="experience-feature-top"><span>SELECTED EXPERIENCE</span><span>RECENT MOBILE PROJECT</span></div>
+        <div className="experience-feature-body">
+          <div className="experience-feature-intro">
+            <p className="work-label">HEALTHCARE & COMMUNITY · DETAILS KEPT PRIVATE</p>
+            <h3>From the first screens<br/><em>to the app stores.</em></h3>
+            <p>I worked on a healthcare and community app built with React Native and Expo. I was involved from the early build through deployment on Android and iOS. The project is covered by an NDA, so I can't share its name or screenshots, but I can talk about the engineering work.</p>
+          </div>
+          <div className="experience-contributions">
+            <div><span>01</span><p><strong>Real-time conversations</strong>Text, image and GIF messaging, plus presence and last-seen updates using AWS Amplify.</p></div>
+            <div><span>02</span><p><strong>Gesture-led discovery</strong>Swipe-based discovery interactions built with Gesture Handler and Reanimated.</p></div>
+            <div><span>03</span><p><strong>Audio and reliability</strong>Podcast playback with React Native Track Player, alongside crash reporting and production fixes.</p></div>
+          </div>
+        </div>
+        <div className="experience-stack"><span>REACT NATIVE</span><span>EXPO</span><span>ANDROID & iOS</span><span>AMPLIFY</span><span>REANIMATED</span><span>TRACK PLAYER</span></div>
+      </article>
+      <div className="experience-foundations">
+        <div><span className="project-detail-number">THE WIDER EXPERIENCE</span><h3>More than one framework.</h3></div>
+        <p>My earlier work also included native Android development with Kotlin and Jetpack Compose, as well as Flutter. That mix gave me a better feel for the different ways mobile apps are structured and the platform details that sit beneath a shared UI.</p>
+      </div>
+    </section>
+
     <section className="work-section" id="work">
       <div className="section-index">CURRENT BUILDS / 02</div>
       <div className="work-heading"><h2>Two things<br/><em>you can try.</em></h2><p>One is an app template other developers can build on. The other is where I get to experiment with games.</p></div>
