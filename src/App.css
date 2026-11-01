@@ -169,3 +169,8 @@
 
 /* Give the portfolio owner's name a quiet accent in the introduction. */
 .hero-name-highlight{color:var(--deep);font-weight:700;text-decoration:underline;text-decoration-color:var(--orange);text-decoration-thickness:1px;text-underline-offset:5px;text-decoration-skip-ink:auto}
+
+/* Quiet availability note: part of the closing invitation, not a new sales section. */
+.footer-availability{display:flex;align-items:center;gap:9px;margin:17px 0 0;color:#788174;font:10px/1.7 var(--mono);letter-spacing:.15px}
+.footer-availability span{width:6px;height:6px;flex:0 0 6px;border-radius:50%;background:#819176;box-shadow:0 0 0 4px #81917618}
+@media(max-width:470px){.footer-availability{font-size:9px;letter-spacing:0}}
