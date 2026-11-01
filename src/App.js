@@ -223,30 +223,37 @@ function App() {
     </section>
 
     <section className="experience-section" id="experience">
-      <div className="section-index">THE WORK BEHIND THE STORY / 03</div>
+      <div className="section-index">A LITTLE OF WHAT I’VE BUILT / 03</div>
       <div className="experience-heading">
-        <h2>Four years of<br/><em>making mobile apps.</em></h2>
-        <p>Across three teams, I worked with native Android, Flutter and React Native. The most recent part of that journey was building and shipping apps for both Android and iOS.</p>
+        <h2>Four years in,<br/><em>still building for mobile.</em></h2>
+        <p>Most of my working life so far has been spent building React Native apps for Android and iOS. Different products, different problems, and plenty of things to figure out along the way.</p>
       </div>
       <article className="experience-feature">
-        <div className="experience-feature-top"><span>SELECTED EXPERIENCE</span><span>RECENT MOBILE PROJECT</span></div>
+        <div className="experience-feature-top"><span>ONE RECENT PROJECT</span><span>THE DETAILS I CAN SHARE</span></div>
         <div className="experience-feature-body">
           <div className="experience-feature-intro">
-            <p className="work-label">HEALTHCARE & COMMUNITY · DETAILS KEPT PRIVATE</p>
-            <h3>From the first screens<br/><em>to the app stores.</em></h3>
-            <p>I worked on a healthcare and community app built with React Native and Expo. I was involved from the early build through deployment on Android and iOS. The project is covered by an NDA, so I can't share its name or screenshots, but I can talk about the engineering work.</p>
+            <p className="work-label">HEALTHCARE & COMMUNITY APP</p>
+            <h3>Taking an idea<br/><em>all the way to release.</em></h3>
+            <p>I helped build a healthcare-focused social community app with React Native and Expo, from its early screens through releases on Android and iOS. The project is under NDA, so I can’t show its name or screens. But these are a few pieces I worked on.</p>
           </div>
           <div className="experience-contributions">
-            <div><span>01</span><p><strong>Real-time conversations</strong>Text, image and GIF messaging, plus presence and last-seen updates using AWS Amplify.</p></div>
-            <div><span>02</span><p><strong>Gesture-led discovery</strong>Swipe-based discovery interactions built with Gesture Handler and Reanimated.</p></div>
-            <div><span>03</span><p><strong>Audio and reliability</strong>Podcast playback with React Native Track Player, alongside crash reporting and production fixes.</p></div>
+            <div><p><strong>Conversations that stay in sync</strong>Real-time chat for text, images and GIFs, along with live presence and last-seen updates using AWS Amplify Gen 2.</p></div>
+            <div><p><strong>A more hands-on way to discover people</strong>Swipe-based profile discovery, built with Gesture Handler and Reanimated.</p></div>
+            <div><p><strong>Audio that lives inside the app</strong>A podcast listening experience using React Native Track Player, plus production fixes and crash monitoring with Firebase Crashlytics.</p></div>
           </div>
         </div>
-        <div className="experience-stack"><span>REACT NATIVE</span><span>EXPO</span><span>ANDROID & iOS</span><span>AMPLIFY</span><span>REANIMATED</span><span>TRACK PLAYER</span></div>
+        <div className="experience-stack"><span>REACT NATIVE</span><span>EXPO</span><span>ANDROID & iOS</span><span>AWS AMPLIFY</span><span>GESTURE HANDLER</span><span>REANIMATED</span><span>TRACK PLAYER</span></div>
       </article>
-      <div className="experience-foundations">
-        <div><span className="project-detail-number">THE WIDER EXPERIENCE</span><h3>More than one framework.</h3></div>
-        <p>My earlier work also included native Android development with Kotlin and Jetpack Compose, as well as Flutter. That mix gave me a better feel for the different ways mobile apps are structured and the platform details that sit beneath a shared UI.</p>
+      <div className="experience-side-notes">
+        <div className="experience-side-heading">
+          <span className="project-detail-number">OTHER THINGS ALONG THE WAY</span>
+          <h3>Not every app<br/><em>solves the same problem.</em></h3>
+        </div>
+        <div className="experience-side-list">
+          <article><span>01</span><div><h4>Helping people find what they need</h4><p>An eCommerce app for Android and iOS, with work around seller onboarding and app performance.</p></div></article>
+          <article><span>02</span><div><h4>Making everyday business tasks easier</h4><p>Mobile apps across education, ERP billing and AMC service-management domains, including client-requested features, production fixes and performance work for newer Android versions.</p></div></article>
+          <article><span>03</span><div><h4>Getting apps into people's hands</h4><p>Working with backend developers, designers and clients, then publishing and maintaining apps on the Play Store and App Store.</p></div></article>
+        </div>
       </div>
     </section>
 
