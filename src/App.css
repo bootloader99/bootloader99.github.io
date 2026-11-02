@@ -250,11 +250,12 @@
 
 /* A contextual shortcut from the work chapter to the detailed experience section. */
 .chapter-mark{flex-wrap:wrap}
-.chapter-mark-label{color:inherit}
-.chapter-work-link{display:inline-flex;align-items:center;gap:7px;margin-left:auto;padding:4px 0;border-bottom:1px solid #c9c7b9;color:#727b6d;font:9px var(--mono);letter-spacing:.8px;white-space:nowrap;transition:color .2s ease,border-color .2s ease}
-.chapter-work-link span{font-size:14px;color:var(--orange);transition:transform .2s ease}
-.chapter-work-link:hover,.chapter-work-link:focus-visible{color:var(--orange);border-color:var(--orange);outline:none}
-.chapter-work-link:hover span{transform:translateY(3px)}
-.chapter-work-link:focus-visible{outline:2px solid var(--orange);outline-offset:5px}
-@media(max-width:470px){.chapter-work-link{font-size:8px;letter-spacing:.6px}}
-@media(prefers-reduced-motion:reduce){.chapter-work-link,.chapter-work-link span{transition:none}}
+.chapter-mark .chapter-mark-dot{display:inline-block;flex:0 0 6px;width:6px;height:6px;background:var(--orange);border-radius:50%}
+.chapter-mark .chapter-mark-label{display:inline;color:inherit;font:inherit;letter-spacing:inherit}
+.chapter-mark .chapter-work-link{display:inline-flex;align-items:center;gap:7px;margin-left:auto;padding:4px 0;border-bottom:1px solid #c9c7b9;color:#727b6d;font:9px var(--mono);letter-spacing:.8px;white-space:nowrap;transition:color .2s ease,border-color .2s ease}
+.chapter-mark .chapter-work-link span{display:inline;color:var(--orange);font:14px var(--mono);transition:transform .2s ease}
+.chapter-mark .chapter-work-link:hover,.chapter-mark .chapter-work-link:focus-visible{color:var(--orange);border-color:var(--orange);outline:none}
+.chapter-mark .chapter-work-link:hover span{transform:translateY(3px)}
+.chapter-mark .chapter-work-link:focus-visible{outline:2px solid var(--orange);outline-offset:5px}
+@media(max-width:470px){.chapter-mark .chapter-work-link{font-size:8px;letter-spacing:.6px}}
+@media(prefers-reduced-motion:reduce){.chapter-mark .chapter-work-link,.chapter-mark .chapter-work-link span{transition:none}}
