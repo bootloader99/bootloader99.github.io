@@ -190,7 +190,7 @@ function App() {
     </header>
 
     <section className="hero">
-      <div className="hero-topline"><span><i/> INDEPENDENT MOBILE APP DEVELOPER</span><span>SOMEWHERE ON EARTH</span></div>
+      <div className="hero-topline"><span><i/> INDEPENDENT DEVELOPER IN THE MAKING</span><span>SOMEWHERE ON EARTH</span></div>
       <div className="hero-layout">
         <div className="hero-main">
           <p className="hero-pretitle">A FEW TURNS THAT BROUGHT ME HERE</p>
