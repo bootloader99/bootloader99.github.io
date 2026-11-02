@@ -191,6 +191,7 @@ function App() {
 
     <section className="hero">
       <div className="hero-topline"><span><i/> INDEPENDENT DEVELOPER IN THE MAKING</span><span>SOMEWHERE ON EARTH</span></div>
+      <div className="hero-work-nav"><a href="#experience">MY WORK <span aria-hidden="true">↓</span></a></div>
       <div className="hero-layout">
         <div className="hero-main">
           <p className="hero-pretitle">A FEW TURNS THAT BROUGHT ME HERE</p>
