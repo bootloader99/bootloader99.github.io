@@ -246,3 +246,15 @@
  .experience-story-marker i{min-height:100%;height:auto}
  .experience-ending{margin:30px 6% 0;text-align:left}
 }
+
+
+/* A quiet shortcut to professional work, without changing the hero's story. */
+.hero-work-nav{display:flex;justify-content:flex-end;margin:15px 0 -25px;position:relative;z-index:2}
+.hero-work-nav a{display:inline-flex;align-items:center;gap:8px;color:#727b6d;font:9px var(--mono);letter-spacing:1px;padding:5px 0;border-bottom:1px solid #c9c7b9;transition:color .2s ease,border-color .2s ease}
+.hero-work-nav a span{font-size:14px;color:var(--orange);transition:transform .2s ease}
+.hero-work-nav a:hover,.hero-work-nav a:focus-visible{color:var(--orange);border-color:var(--orange);outline:none}
+.hero-work-nav a:hover span{transform:translateY(3px)}
+.hero-work-nav a:focus-visible{outline:2px solid var(--orange);outline-offset:5px}
+@media(max-width:760px){.hero-work-nav{margin:14px 0 -22px}}
+@media(max-width:470px){.hero-work-nav a{font-size:8px;letter-spacing:.7px}}
+@media(prefers-reduced-motion:reduce){.hero-work-nav a,.hero-work-nav a span{transition:none}}
