@@ -8,7 +8,7 @@ function Chapter({ chapter, index }) {
       <h3>{chapter.title}</h3>
       <p>{chapter.text}</p>
       <div className="chapter-mark">
-        <span className="chapter-mark-dot" aria-hidden="true"/>
+        <i className="chapter-mark-dot" aria-hidden="true"/>
         <span className="chapter-mark-label">{chapter.mark}</span>
         {chapter.kind === "career" && <a className="chapter-work-link" href="#experience">MY WORK <span aria-hidden="true">↓</span></a>}
       </div>
