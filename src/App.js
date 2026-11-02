@@ -190,12 +190,12 @@ function App() {
     </header>
 
     <section className="hero">
-      <div className="hero-topline"><span><i/> INDEPENDENT DEVELOPER IN THE MAKING</span><span>SOMEWHERE ON EARTH</span></div>
+      <div className="hero-topline"><span><i/> INDEPENDENT MOBILE APP DEVELOPER</span><span>SOMEWHERE ON EARTH</span></div>
       <div className="hero-layout">
         <div className="hero-main">
           <p className="hero-pretitle">A FEW TURNS THAT BROUGHT ME HERE</p>
           <h1>I started with<br/>a question:<br/><em>how does this<br/>actually work?</em></h1>
-          <p className="hero-description">I’m <span className="hero-name-highlight">Hisham</span>. I build mobile apps, make small games, and love figuring out how things work. What started with tinkering with Android has grown into a curiosity that keeps me exploring technology and building things of my own.</p>
+          <p className="hero-description">I’m <span className="hero-name-highlight">Hisham</span>. I build mobile apps with React Native, make small games, and love figuring out how things work. What started with tinkering with Android has grown into a curiosity that keeps me exploring technology and building things of my own.</p>
           <a className="scroll-cue" href="#story"><span className="scroll-line"/> SCROLL THROUGH THE STORY <b>↓</b></a>
         </div>
         <div className="hero-art" aria-label="An abstract illustration of curiosity connecting systems, apps and games">
