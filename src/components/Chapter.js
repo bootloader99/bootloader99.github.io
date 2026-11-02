@@ -8,6 +8,11 @@ function Chapter({ chapter, index }) {
       <h3>{chapter.title}</h3>
       <p>{chapter.text}</p>
       <div className="chapter-mark"><span/> {chapter.mark}</div>
+      {chapter.kind === "career" && (
+        <div className="chapter-career-cta">
+          <a href="#experience">PROFESSIONAL EXPERIENCE <span aria-hidden="true">↓</span></a>
+        </div>
+      )}
     </div>
     <ChapterSketch kind={chapter.kind}/>
   </article>;
