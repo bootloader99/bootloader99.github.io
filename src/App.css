@@ -290,3 +290,33 @@
  .build-note-body{margin:0 0 24px;padding:0 2px}
 }
 @media(prefers-reduced-motion:reduce){.build-note-meta b{transition:none}}
+
+
+/* Expandable project thinking notes, kept within the existing experience visual language. */
+.experience-thinking{margin:0 0 36px 5%;max-width:900px}
+.experience-thinking-heading{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:12px}
+.experience-thinking-heading .work-label{margin:0}
+.experience-thinking-heading>p{max-width:380px;margin:0;color:#858779;font-size:11px;line-height:1.7}
+.thinking-note{border-top:1px solid var(--line)}
+.thinking-note:last-child{border-bottom:1px solid var(--line)}
+.thinking-note summary{list-style:none;display:grid;grid-template-columns:170px 1fr 22px;gap:18px;align-items:center;padding:16px 3px;cursor:pointer}
+.thinking-note summary::-webkit-details-marker{display:none}
+.thinking-note summary>span{font:8px var(--mono);letter-spacing:.55px;color:#858779}
+.thinking-note summary>strong{font:500 17px/1.35 var(--display);color:var(--deep)}
+.thinking-note summary>b{font:18px var(--body);font-weight:400;color:var(--orange);transition:transform .2s ease}
+.thinking-note[open] summary>b{transform:rotate(45deg)}
+.thinking-note summary:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.thinking-note-body{max-width:690px;margin:0 35px 20px 188px}
+.thinking-note-body p{margin:0 0 11px;color:#71766b;font-size:11px;line-height:1.85}
+.thinking-note-body p strong{color:var(--deep);font-weight:600}
+@media(max-width:760px){
+ .experience-thinking{margin:0 2% 32px}
+ .experience-thinking-heading{display:block}
+ .experience-thinking-heading>p{margin-top:7px}
+ .thinking-note summary{grid-template-columns:1fr 22px;gap:7px 12px;padding:15px 2px}
+ .thinking-note summary>span{grid-column:1}
+ .thinking-note summary>strong{grid-column:1;grid-row:2}
+ .thinking-note summary>b{grid-column:2;grid-row:1/3}
+ .thinking-note-body{margin:0 24px 18px 2px}
+}
+@media(prefers-reduced-motion:reduce){.thinking-note summary>b{transition:none}}
