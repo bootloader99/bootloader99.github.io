@@ -229,6 +229,31 @@ function App() {
         <p>It started with one eCommerce app and grew into a mix of projects for different people and different needs. Most of that time has been spent with React Native, building for both Android and iOS.</p>
       </div>
 
+      <div className="experience-thinking">
+        <div className="experience-thinking-heading">
+          <span className="work-label">A CLOSER LOOK AT THE WORK</span>
+          <p>Not just what went into each app, but a little of the thinking behind it.</p>
+        </div>
+        <details className="thinking-note">
+          <summary><span>01 / ECOMMERCE</span><strong>Managing asynchronous app state during seller onboarding</strong><b>＋</b></summary>
+          <div className="thinking-note-body">
+            <p><strong>The problem</strong>Seller onboarding involved interactions with backend services, so the app had to handle asynchronous work and reflect its state in the interface.</p>
+            <p><strong>The approach</strong>I used Redux Toolkit to manage that asynchronous state in the React Native app, while working alongside the backend and design teams as the onboarding experience came together.</p>
+            <p><strong>The consideration</strong>Keeping the app's state and the backend response in step was an important part of making the flow behave consistently. The work also depended on coordinating the app, API behaviour and designed screens rather than treating the mobile UI in isolation.</p>
+            <p><strong>The result</strong>The seller onboarding experience became part of the eCommerce app delivered for Android and iOS, and the app was published to both stores.</p>
+          </div>
+        </details>
+        <details className="thinking-note">
+          <summary><span>02 / HEALTHCARE & COMMUNITY</span><strong>Supporting conversations and presence in real time</strong><b>＋</b></summary>
+          <div className="thinking-note-body">
+            <p><strong>The problem</strong>The app needed more than a basic message screen. People could exchange text, images and GIFs, while also seeing live presence and last-seen information.</p>
+            <p><strong>The approach</strong>I worked with AWS Amplify Gen 2 for the chat and presence features. For observing conversation updates, I used its data observation capabilities so the interface could respond as messages changed.</p>
+            <p><strong>The consideration</strong>Real-time features introduce more moving parts than a simple request-and-response screen: message updates, media, connection state and presence all need to be reflected sensibly in the UI. The implementation also relied on the app's Amplify-backed services, rather than being a standalone local feature.</p>
+            <p><strong>The result</strong>The app supported real-time text, image and GIF conversations, along with live user presence and last-seen updates, as part of its wider community experience.</p>
+          </div>
+        </details>
+      </div>
+
       <div className="experience-story">
         <article className="experience-story-entry">
           <div className="experience-story-marker"><span>01</span><i/></div>
