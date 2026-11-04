@@ -300,16 +300,16 @@ function App() {
         </details>
         <details className="build-note">
           <summary>
-            <span className="build-note-index">NOTE 02 · REACT NATIVE CLI</span>
-            <span className="build-note-title">The native build is part of the app, not an afterthought.</span>
+            <span className="build-note-index">NOTE 02 · REACT NATIVE / RELEASES</span>
+            <span className="build-note-title">Getting a React Native app ready to ship.</span>
             <span className="build-note-meta">ANDROID · iOS · RELEASE PREPARATION <b>＋</b></span>
           </summary>
           <div className="build-note-body">
-            <p>It's easy to think of a React Native app as JavaScript and a set of screens. But the moment a project depends on native modules, the Android and iOS projects become part of the work too.</p>
-            <p>That was one reason I chose the Community CLI for Business Manager. Having direct access to Gradle on Android and the Xcode and CocoaPods setup on iOS gives the person adapting the template more control over app identifiers, native configuration, signing and distribution.</p>
-            <p>That control comes with responsibility. A dependency update can affect one platform differently from the other, and a successful JavaScript build doesn't prove that the native app will compile, install or launch. I treat platform builds as something to verify in their own right.</p>
-            <p>For this project, I worked through the Android signing setup and an iOS build workflow, then checked that the generated app could be installed and launched in the simulator. It made the release path part of the template's hand-off, rather than leaving the next developer to discover those steps alone.</p>
-            <p className="build-note-takeaway"><strong>What I took away:</strong> a React Native project isn't ready to hand over just because the screens work. The native setup and a repeatable path to a working build matter too.</p>
+            <p>A React Native app can be built with Expo or the Community CLI, and both approaches can produce real Android and iOS applications. Expo has taken care of many parts of the native workflow that developers once had to manage themselves, so using the CLI isn't automatically a better or more capable choice.</p>
+            <p>The right setup depends on the project. Expo provides a productive managed workflow and tools for building and shipping apps, while the Community CLI gives direct ownership of the native Android and iOS project files. That lower-level access can be useful when a project needs particular native customisation or when its dependencies and workflow call for it.</p>
+            <p>I've worked with both: an Expo app for a healthcare and community product, and a Community CLI project for Business Manager. The workflows differ, but neither removes the need to understand how the app is configured and how it reaches users.</p>
+            <p>Before calling a release ready, I want to verify more than the JavaScript bundle. I check the platform builds, app identifiers, signing and configuration, then install and launch the app on the relevant targets. Dependency changes can affect Android and iOS differently, so both paths deserve attention.</p>
+            <p className="build-note-takeaway"><strong>What I took away:</strong> there's no universal winner between Expo and the Community CLI. Choose the workflow that fits the app, then verify the actual builds and release process instead of assuming a successful development run guarantees a smooth release.</p>
           </div>
         </details>
       </div>
