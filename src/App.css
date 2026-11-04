@@ -256,3 +256,37 @@
 .chapter-career-cta a:hover span{transform:translateY(3px)}
 .chapter-career-cta a:focus-visible{outline:2px solid var(--orange);outline-offset:5px}
 @media(prefers-reduced-motion:reduce){.chapter-career-cta a,.chapter-career-cta a span{transition:none}}
+
+
+/* Build notes: a quiet reading corner that belongs to the existing personal log. */
+.build-notes-section{padding:92px 0 100px;border-top:1px solid var(--line)}
+.build-notes-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin:22px 0 38px}
+.build-notes-heading h2{font:500 clamp(42px,5.4vw,68px)/.98 var(--display);letter-spacing:-.07em;margin:0}
+.build-notes-heading h2 em{font-style:normal;color:var(--deep)}
+.build-notes-heading>p{max-width:355px;color:#72766b;font-size:13px;line-height:1.85;margin:0 0 5px}
+.build-notes-list{border-top:1px solid var(--line)}
+.build-note{border-bottom:1px solid var(--line)}
+.build-note summary{list-style:none;display:grid;grid-template-columns:190px 1fr 250px;gap:20px;align-items:center;padding:23px 4px;cursor:pointer}
+.build-note summary::-webkit-details-marker{display:none}
+.build-note-index,.build-note-meta{font:8px var(--mono);letter-spacing:.65px;color:#858779}
+.build-note-title{font:500 clamp(18px,2.1vw,24px)/1.25 var(--display);letter-spacing:-.035em;color:var(--deep)}
+.build-note-meta{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.build-note-meta b{font:18px var(--body);color:var(--orange);transition:transform .2s ease}
+.build-note[open] .build-note-meta b{transform:rotate(45deg)}
+.build-note summary:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
+.build-note-body{max-width:720px;margin:0 0 28px 210px;padding:0 25px 0 0}
+.build-note-body p{font-size:12px;line-height:1.95;color:#6d7368;margin:0 0 13px}
+.build-note-body .build-note-takeaway{padding:15px 18px;background:#e7e5d8;border:1px solid #d5d5c8;margin-top:18px}
+.build-note-takeaway strong{color:var(--deep)}
+@media(max-width:760px){
+ .build-notes-section{padding:76px 0}
+ .build-notes-heading{align-items:start;flex-direction:column;gap:18px}
+ .build-notes-heading>p{max-width:500px}
+ .build-note summary{grid-template-columns:1fr auto;gap:9px 15px;padding:20px 2px}
+ .build-note-index{grid-column:1}
+ .build-note-title{grid-column:1/-1;grid-row:2}
+ .build-note-meta{grid-column:1/-1;grid-row:3}
+ .build-note-meta b{margin-left:auto}
+ .build-note-body{margin:0 0 24px;padding:0 2px}
+}
+@media(prefers-reduced-motion:reduce){.build-note-meta b{transition:none}}
