@@ -277,6 +277,44 @@ function App() {
       </div>
     </section>
 
+    <section className="build-notes-section" id="notes">
+      <div className="section-index">FIELD NOTES / THINGS I’VE LEARNED ALONG THE WAY</div>
+      <div className="build-notes-heading">
+        <h2>A few things<br/><em>worth writing down.</em></h2>
+        <p>Small notes from building apps: decisions, trade-offs and details that are easy to miss when you're focused on getting a feature working.</p>
+      </div>
+      <div className="build-notes-list">
+        <details className="build-note">
+          <summary>
+            <span className="build-note-index">NOTE 01 · REACT NATIVE / SQLITE</span>
+            <span className="build-note-title">Offline-first is more than choosing a local database.</span>
+            <span className="build-note-meta">DATA MODELLING · TRANSACTIONS · BACKUPS <b>＋</b></span>
+          </summary>
+          <div className="build-note-body">
+            <p>When I started building Business Manager, I knew it had to work without asking the user to create an account or depend on a server. SQLite was a natural fit, but choosing a local database was only the beginning.</p>
+            <p>Business data is connected. A sale can contain several line items, update stock, and refer to customer and product records. Those changes need to succeed together. I used database transactions for multi-step operations so a failure doesn't leave a half-written sale behind.</p>
+            <p>I also had to think about what happens after the first release. A database schema changes as an app grows, so the app tracks its schema version and applies ordered migrations. Existing installs need a safe path forward; testing only a fresh database isn't enough.</p>
+            <p>And because the data lives on the device, export and restore matter. Business Manager uses a versioned JSON backup format and validates the data before importing it. That isn't cloud sync, and it doesn't protect someone who loses both their device and their backup, but it gives users a deliberate way to move their data.</p>
+            <p className="build-note-takeaway"><strong>What I took away:</strong> offline-first isn't a storage-library feature. It affects data relationships, failure handling, schema changes and the way users protect their information.</p>
+          </div>
+        </details>
+        <details className="build-note">
+          <summary>
+            <span className="build-note-index">NOTE 02 · REACT NATIVE CLI</span>
+            <span className="build-note-title">The native build is part of the app, not an afterthought.</span>
+            <span className="build-note-meta">ANDROID · iOS · RELEASE PREPARATION <b>＋</b></span>
+          </summary>
+          <div className="build-note-body">
+            <p>It's easy to think of a React Native app as JavaScript and a set of screens. But the moment a project depends on native modules, the Android and iOS projects become part of the work too.</p>
+            <p>That was one reason I chose the Community CLI for Business Manager. Having direct access to Gradle on Android and the Xcode and CocoaPods setup on iOS gives the person adapting the template more control over app identifiers, native configuration, signing and distribution.</p>
+            <p>That control comes with responsibility. A dependency update can affect one platform differently from the other, and a successful JavaScript build doesn't prove that the native app will compile, install or launch. I treat platform builds as something to verify in their own right.</p>
+            <p>For this project, I worked through the Android signing setup and an iOS build workflow, then checked that the generated app could be installed and launched in the simulator. It made the release path part of the template's hand-off, rather than leaving the next developer to discover those steps alone.</p>
+            <p className="build-note-takeaway"><strong>What I took away:</strong> a React Native project isn't ready to hand over just because the screens work. The native setup and a repeatable path to a working build matter too.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
     <section className="curiosity-section">
       <div className="curiosity-stamp">ONE DAY<br/>AT A TIME<br/><span>✳</span></div>
       <div><div className="section-index">WHAT I’M WORKING TOWARDS</div><h2>A game of<br/><em>my own.</em></h2><p>The bigger goal is to make a PC game and release it on Steam one day: something I can take from the first rough idea to a finished game people can install, play and make their own memories with. I don’t know what that game will be yet, or everything it will take to get there. For now, I’m building the skills through smaller projects, one piece at a time.</p><div className="curiosity-tags"><span>SMALL GAMES</span><span>UNITY</span><span>THE LONG GAME</span></div></div>
