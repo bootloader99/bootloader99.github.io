@@ -266,6 +266,7 @@ function App() {
         <div className="experience-stack"><span>REACT NATIVE</span><span>EXPO</span><span>ANDROID & iOS</span><span>REDUX TOOLKIT</span><span>AWS AMPLIFY</span><span>GESTURE HANDLER</span><span>REANIMATED</span><span>TRACK PLAYER</span><span>FIREBASE CRASHLYTICS</span></div>
       </article>
       <p className="experience-ending">Different apps, different teams, and a lot of learning in between. Somewhere in all that, building mobile apps stopped being something I was curious about and became the thing I do.</p>
+      <p className="experience-next-step">Along the way, I’ve worked on new features, API integrations, app releases and the fixes that come after launch. I’m comfortable joining a project that’s already underway, as well as helping build something new.</p>
     </section>
 
     <section className="work-section" id="work">
