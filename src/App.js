@@ -265,7 +265,7 @@ function App() {
         </div>
         <div className="experience-stack"><span>REACT NATIVE</span><span>EXPO</span><span>ANDROID & iOS</span><span>REDUX TOOLKIT</span><span>AWS AMPLIFY</span><span>GESTURE HANDLER</span><span>REANIMATED</span><span>TRACK PLAYER</span><span>FIREBASE CRASHLYTICS</span></div>
       </article>
-      <p className="experience-ending">Working across different apps and teams has taken me from building features and integrating APIs to releasing apps and fixing issues after launch. I enjoy both bringing something new to life and helping an existing app move forward.</p>
+      <div className="experience-ending"><p>Working across different apps and teams has given me a feel for the full development process, from building features and integrating APIs to releasing apps and dealing with issues after launch.</p><p>I enjoy both starting something from scratch and stepping into an existing app to make it better.</p></div>
     </section>
 
     <section className="work-section" id="work">
