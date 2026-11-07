@@ -13,6 +13,11 @@ function Chapter({ chapter, index }) {
           <a href="#experience">PROFESSIONAL EXPERIENCE <span aria-hidden="true">↓</span></a>
         </div>
       )}
+      {chapter.kind === "product" && (
+        <div className="chapter-career-cta">
+          <a href="#business-manager">MORE ABOUT BUSINESS MANAGER <span aria-hidden="true">↓</span></a>
+        </div>
+      )}
     </div>
     <ChapterSketch kind={chapter.kind}/>
   </article>;
