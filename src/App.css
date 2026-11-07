@@ -290,3 +290,10 @@
  .build-note-body{margin:0 0 24px;padding:0 2px}
 }
 @media(prefers-reduced-motion:reduce){.build-note-meta b{transition:none}}
+
+
+/* Footer: one clear invitation, with the heading, copy and action sharing an edge. */
+.footer-top{max-width:620px;padding-top:72px;padding-bottom:76px}
+.footer-top h2{margin:18px 0 20px}
+.footer-top .footer-invitation{max-width:470px;margin:0;color:#72766b;font-size:13px;line-height:1.9}
+.footer-top .footer-cta{margin-top:25px}
