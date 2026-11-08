@@ -239,12 +239,12 @@
 .experience-story-copy h3{font:500 clamp(27px,3.1vw,38px)/1.04 var(--display);letter-spacing:-.055em;margin:14px 0}
 .experience-story-copy h3 em{font-style:normal;color:var(--deep)}
 .experience-story-copy>p:last-child{max-width:470px;margin:0;color:#6d7368;font-size:12px;line-height:1.9}
-.experience-ending{max-width:660px;margin:28px 5% 0;text-align:left;color:#72766b;font-size:12px;line-height:1.9}
+.experience-ending{width:90%;max-width:none;margin:28px auto 0;text-align:left;color:#72766b;font-size:12px;line-height:1.9;box-sizing:border-box}
 @media(max-width:760px){
  .experience-story{grid-template-columns:1fr;gap:30px;margin-bottom:38px;padding:0 2%}
  .experience-story-entry{grid-template-columns:25px 1fr;gap:14px}
  .experience-story-marker i{min-height:100%;height:auto}
- .experience-ending{margin:24px 6% 0;padding:0;text-align:left}
+ .experience-ending{width:88%;margin:24px auto 0;padding:0;text-align:left}
 }
 
 
